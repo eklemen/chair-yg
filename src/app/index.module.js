@@ -2,6 +2,6 @@
   'use strict';
 
   angular
-    .module('chairYg', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngAria', 'ngResource', 'ngRoute', 'ngMaterial', 'toastr']);
+    .module('chairYg', ['ngAnimate','ngCookies','ngTouch','ngAria','ngResource','ngRoute','ngMaterial','toastr','angular-scroll-animate']);
 
 })();
