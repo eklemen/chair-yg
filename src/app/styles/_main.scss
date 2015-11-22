@@ -9,6 +9,7 @@
 
 .main{
 	.section1{
+		clear: both;
 		height: 600px;
 		.background{
 			@include background-image('../assets/images/flower-unlit.JPG');
@@ -39,6 +40,27 @@
 				    }
 				}
 
+			}
+		}
+	}
+
+	.section2{
+		clear: both;
+		padding-top: 25px;
+		min-height: 300px;
+		display: flex;
+		align-items: center;
+		.info-container{
+			.info-item{
+			    padding: 2%;
+				text-align: center;
+				.material-icons {
+					font-size: 48px;
+				}
+				@media(max-width: 600px){
+					padding-left: 10%;
+					padding-right: 10%;
+				}
 			}
 		}
 	}
