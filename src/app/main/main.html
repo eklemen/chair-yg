@@ -43,32 +43,39 @@
     </div> <!-- .section1 #about -->
 
 
-    <div class="section4" id="contact">
-      <form ng-submit="main.sendMessage(message)" name="emailForm" layout="column" layout-align="end center">
-        <md-input-container class="md-block">
-          <label>Name</label>
-          <input name="name" ng-model="main.message.name">
-          <!-- <div ng-messages="message.name.$error">
-            <div ng-message="required">Please enter your name</div>
-          </div> -->
-        </md-input-container>
+    <div class="section4" id="contact" layout="row" >
+      <div class="form-container">
+        <form ng-submit="main.sendMessage(message)" name="emailForm" >
+          <div>
+            <md-input-container class="md-block">
+              <label>Name</label>
+              <input name="name" ng-model="main.message.name">
+              <!-- <div ng-messages="message.name.$error">
+                <div ng-message="required">Please enter your name</div>
+              </div> -->
+            </md-input-container>
 
-        <md-input-container class="md-block">
-          <label>Email</label>
-          <input name="_replyto" ng-model="main.message.replyTo">
-        </md-input-container>
+            <md-input-container class="md-block">
+              <label>Email</label>
+              <input name="_replyto" ng-model="main.message.replyTo">
+            </md-input-container>
 
-        <md-input-container class="md-block">
-          <label>Message</label>
-          <textarea ng-model="main.message.body" name="message" columns="1" rows="3" placeholder="Enter your message here..."></textarea>
-        </md-input-container>
-        <input type="text" name="_gotcha" style="display:none" />
-        <input type="hidden" name="_next" value="#" />
-        <!-- <input type="submit" value="Send"> -->
-        <md-button class="md-raised md-primary" type="submit" value="Send">Send</md-button>
-      </form>
-      {{main.message}}
-    </div>
+            <md-input-container class="md-block">
+              <label>Message</label>
+              <textarea ng-model="main.message.body" name="message" columns="1" rows="3" placeholder="Enter your message here..."></textarea>
+            </md-input-container>
+            <input type="text" name="_gotcha" style="display:none" />
+            <input type="hidden" name="_next" value="#" />
+            <!-- <input type="submit" value="Send"> -->
+            <md-button flex="50" class="md-raised md-primary" type="submit" value="Send">Send</md-button>
+          </div>
+        </form>
+      </div>
+      <!-- <button ng-click="main.alertError()"></button> -->
+      <div class="form-image">
+        <img src="../assets/images/lady-flower.png" alt="">
+      </div>
+    </div> <!-- .section4 -->
 
     
 

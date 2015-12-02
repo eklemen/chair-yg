@@ -10,32 +10,16 @@
     var self = this;
 
     self.message = {};
-
-    // function serializeData( data ) { 
-    //     // If this is not an object, defer to native stringification.
-    //     if ( ! angular.isObject( data ) ) { 
-    //         return( ( data == null ) ? "" : data.toString() ); 
-    //     }
-
-    //     var buffer = [];
-
-    //     // Serialize each key in the object.
-    //     for ( var name in data ) { 
-    //         if ( ! data.hasOwnProperty( name ) ) { 
-    //             continue; 
-    //         }
-
-    //         var value = data[ name ];
-
-    //         buffer.push(
-    //             encodeURIComponent( name ) + "=" + encodeURIComponent( ( value == null ) ? "" : value )
-    //         ); 
-    //     }
-
-    //     // Serialize the buffer and clean it up for transportation.
-    //     var source = buffer.join( "&" ).replace( /%20/g, "+" ); 
-    //     return( source ); 
-    // }
+    self.alertSuccess = function(){
+      swal('Thanks!',
+        'We will get back to you soon.',
+        'success');
+    };
+    self.alertError = function(){
+      swal('Oops...',
+        'There was a problem sending your email.',
+        'error');
+    };
 
     self.sendMessage = function() {
       $http({
@@ -53,10 +37,12 @@
 
           if (!data.success) {
             // if not successful, bind errors to error variables
+            self.alertError()
             self.errorName = data.errors.name;
             self.errorSuperhero = data.errors.superheroAlias;
           } else {
             // if successful, bind success message to message
+            self.alertSuccess();
             self.message = data.message;
           }
         });
