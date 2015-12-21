@@ -1,38 +1,40 @@
 <md-toolbar class="nav" layout="row" layout-align="start center">
 
-  <md-button href="#">Chair You Go</md-button>
+	<div class="top-logo">
+		<md-button href="#/">
+			<div layout="row" layout-align="center center">
+				<span>Dazzling Deco</span>
+			</div>
+		</md-button>
+	</div>
 
-  <section flex layout="row" layout-align="end center">
-    <!-- <md-button href="#" class="md-raised">Home</md-button>
-    <md-button href="#about" class="md-raised">About</md-button>
-    <md-button href="#contact" class="md-raised">Contact</md-button> -->
-    <md-fab-speed-dial md-open="true" md-direction="left" ng-class="'md-scale'">
-        <md-fab-trigger>
-          <md-button aria-label="menu" class="md-fab md-warn">
-            <md-icon class="material-icons">menu</md-icon>
-          </md-button>
-        </md-fab-trigger>
+	<section flex layout="row" layout-align="end end" layout-margin layout-margin>
+		<div class="call" layout="row" layout-align="center center">
+			<md-button class="md-fab md-mini side-nav" ng-click="vm.toggle()" aria-label="Menu">
+	        	<md-icon class="material-icons icon">menu</md-icon>
+	        </md-button>
+		</div>
+		
+	</section>
 
-        <md-fab-actions>
-          <a href="//google.com">
-            <md-button class="md-fab md-raised md-mini">
-            <md-icon class="material-icons">instagram</md-icon>
-          </md-button>
-          </a>
-          
-          <a href="//yahoo.com">
-            <md-button aria-label="Facebook" class="md-fab md-raised md-mini">
-              <md-icon class="material-icons" aria-label="Facebook"></md-icon>
-            </md-button>
-          </a>
-          
-          <a href="//woot.com">
-            <md-button aria-label="Google Hangout" class="md-fab md-raised md-mini">
-              <md-icon class="material-icons" aria-label="Google Hangout"></md-icon>
-            </md-button>
-          </a>
-        </md-fab-actions>
-    </md-fab-speed-dial>
-  </section>
+	<div class="nav-links" layout="row" layout-align="center center">
+		<md-menu-bar>
+			<md-button class="" href="#/about">
+				About
+			</md-button>
+			<md-button class="" href="#/custom">
+				Custom Orders
+			</md-button>
+			<md-button class="" href="#/faq">
+				FAQ
+			</md-button>
+			<md-button class="" href="#/contact">
+				Contact
+			</md-button>
+
+		</md-menu-bar>
+	</div>
 
 </md-toolbar>
+
+<!-- <ng-include src="'app/components/navbar/sidenav.html'"></ng-include> -->

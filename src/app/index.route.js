@@ -12,6 +12,12 @@
         controller: 'MainController',
         controllerAs: 'main'
       })
+      .when('/contact', {
+        templateUrl: 'app/contact/contact.html',
+        controller: 'ContactController',
+        controllerAs: 'con'
+      })
+
       .otherwise({
         redirectTo: '/'
       });

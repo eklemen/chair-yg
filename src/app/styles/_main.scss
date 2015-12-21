@@ -21,7 +21,10 @@
 				@include background-image('../assets/images/flower-unlit.JPG');
 			}
 			&.bg-2{
-				@include background-image('../assets/images/flower2-sm.JPG', fixed);	
+				@include background-image('../assets/images/flower2-sm.JPG');
+				@media(max-device-width: 768px){
+					background-attachment: scroll;
+				}
 			}
 			.content{
 				p{
