@@ -8,6 +8,9 @@
 }
 
 .main{
+	.overflow-hidden{
+		overflow: hidden;
+	}
 	.section1{
 		clear: both;
 		height: 700px;

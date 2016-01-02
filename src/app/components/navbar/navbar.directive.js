@@ -40,6 +40,8 @@
       $scope.$on('$routeChangeStart', function(next, current) { 
         vm.close();
       });
+
+      
     }
   }
 
