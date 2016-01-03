@@ -6,7 +6,7 @@
     .controller('MainController', MainController);
 
   /** @ngInject */
-  function MainController($http, $httpParamSerializerJQLike) {
+  function MainController() {
     var self = this;
 
     // self.message = {};

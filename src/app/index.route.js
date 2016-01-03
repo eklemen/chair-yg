@@ -17,6 +17,11 @@
         controller: 'ContactController',
         controllerAs: 'con'
       })
+      .when('/custom', {
+        templateUrl: 'app/custom/custom.html',
+        controller: 'CustomController',
+        controllerAs: 'custom'
+      })
 
       .otherwise({
         redirectTo: '/'

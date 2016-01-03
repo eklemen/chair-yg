@@ -28,7 +28,7 @@
           .when('left')
           .then( function(sideNav){
 
-        vm.isOpen = angular.bind( sideNav, sideNav.isOpen );
+        vm.isOpen = $scope.$emit('menuOpen', angular.bind( sideNav, sideNav.isOpen ));
         vm.toggle = angular.bind( sideNav, sideNav.toggle );
 
       });

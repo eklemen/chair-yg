@@ -5,11 +5,12 @@
 
 body{
 	font-family: 'Raleway', sans-serif;
+	.row{
+		margin-left: 0;
+		margin-right: 0;
+	}
 }
-.row{
-	margin-left: 0;
-	margin-right: 0;
-}
+
 
 @mixin hide-below($size: 680px){
 	@media(max-width: $size){

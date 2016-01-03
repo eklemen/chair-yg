@@ -3,8 +3,6 @@
   'use strict';
 
   angular
-    .module('chairYg')
-    .constant('malarkey', malarkey)
-    .constant('moment', moment);
+    .module('chairYg');
 
 })();

@@ -18,6 +18,8 @@
 
 // sidenav partial
 .side-content{
+	height: 100%;
+	// position: fixed;
 	.close{
 		margin: 12px;
 		&:hover{
