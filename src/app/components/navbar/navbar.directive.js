@@ -18,20 +18,23 @@
     return directive;
 
     /** @ngInject */
-    function NavbarController($scope, $mdComponentRegistry, $mdSidenav) {
+    function NavbarController($scope, $mdSidenav, $rootScope) {
       var vm = this;
 
-      vm.toggle = angular.noop;
-        vm.isOpen = function() { return false };
+      // vm.toggle = angular.noop;
+      //   vm.isOpen = function() { return false };
         
-        $mdComponentRegistry
-          .when('left')
-          .then( function(sideNav){
+      //   $mdComponentRegistry
+      //     .when('left')
+      //     .then( function(sideNav){
 
-        vm.isOpen = $scope.$emit('menuOpen', angular.bind( sideNav, sideNav.isOpen ));
-        vm.toggle = angular.bind( sideNav, sideNav.toggle );
+      //   $rootScope.isOpen = angular.bind( sideNav, sideNav.isOpen );
+      //   $rootScope.toggle = angular.bind( sideNav, sideNav.toggle );
 
-      });
+      // });
+      vm.toggle = function () {
+          $mdSidenav('left').toggle();
+        };
 
       vm.close = function() {
         $mdSidenav('left').close();
