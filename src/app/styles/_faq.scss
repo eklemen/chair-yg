@@ -1,0 +1,40 @@
+.faq{
+	padding: 90px 5% 0 5%;
+	.questions{
+		.question-text{
+			min-height: 37px;
+			a{
+				text-decoration: none;
+				&:hover{
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+	.answers{
+		.answer-item{
+			&.active{
+				color: cornflowerblue;
+				border: solid 1px;
+				border-radius: 8px;
+			}
+			margin-bottom: 35px;
+			margin-top: 35px;
+			max-width: 850px;
+			h3{
+				font-size: 1.05em;
+				margin: 10px 0;
+			}
+			&:last-child{
+				margin-bottom: 55px;
+			}
+		}
+	}
+	.to-top{
+		position: fixed;
+		right: 5px;
+		bottom: 0;
+		background-color: white !important;
+		color: black !important;
+	}
+}

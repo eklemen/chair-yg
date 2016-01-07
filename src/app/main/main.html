@@ -12,7 +12,7 @@
     </div> <!-- .section1 -->
 
     <div class="section2">
-        <div class="info-container" layout="row" layout-sm="column" layout-align="space-between center" layout-align-sm="center center">
+        <div class="info-container" layout-gt-xs="row" layout="column" layout-align-gt-xs="space-between center" layout-align="center center">
           <div class="info-item" flex>
             <md-icon class="material-icons">dashboard</md-icon>
             <h4>Specialty Items</h4>
@@ -31,22 +31,25 @@
         </div>
     </div> <!-- .section2 -->
 
-    <div class="section1" id="about">
+    <div class="section1 section3">
       <div layout-fill class="background bg-2">
         <div class="content" layout="row" layout-align="center center">
-          <p flex="66" flex-sm="90">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque a cursus risus. Morbi pretium porta dui, ac ultrices purus suscipit in. Donec in egestas ex, eget varius massa. Nullam fermentum sed neque at fermentum. Duis quis erat ac ipsum rutrum auctor at eu lacus. Fusce volutpat quis magna in aliquet. Proin a massa metus. Quisque tortor mi, volutpat in ligula ut, aliquet commodo neque. Donec lacinia suscipit nisi.</p>
+          <p flex="66" flex-sm="90">Whether you are hosting a corporate event, your dream wedding, or a baby shower, we offer gorgeous, hand-constructed paper floral backdrops.</p>
         </div>
       </div>
-    </div> <!-- .section1 #about -->
+    </div> <!-- .section1 .section3 -->
 
 
     <div class="section4" id="contact" layout="row" >
       <div class="form-container">
+      <div>
+        <p>If you have any questions, just fill out the form below and we will get back to you as soon as we can!</p>
+      </div>
         <form ng-submit="main.sendMessage(message)" name="emailForm" >
           <div>
             <md-input-container class="md-block">
               <label>Name</label>
-              <input name="name" ng-model="main.message.name">
+              <input name="name" ng-model="main.message.name" required="true">
               <!-- <div ng-messages="message.name.$error">
                 <div ng-message="required">Please enter your name</div>
               </div> -->
@@ -54,12 +57,12 @@
 
             <md-input-container class="md-block">
               <label>Email</label>
-              <input name="_replyto" ng-model="main.message._replyTo">
+              <input name="_replyto" ng-model="main.message._replyTo" required="true" ng-pattern="/^.+@.+\..+$/">
             </md-input-container>
 
             <md-input-container class="md-block">
               <label>Message</label>
-              <textarea ng-model="main.message.body" name="message" columns="1" rows="3" placeholder="Enter your message here..."></textarea>
+              <textarea ng-model="main.message.body" name="message" columns="1" rows="3" placeholder="Enter your message here..." required="true"></textarea>
             </md-input-container>
             <input type="text" name="_gotcha" style="display:none" />
             <input type="hidden" name="_next" value="#" />

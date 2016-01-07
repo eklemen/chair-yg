@@ -17,10 +17,15 @@
         controller: 'ContactController',
         controllerAs: 'con'
       })
-      .when('/custom', {
+      .when('/customOrders', {
         templateUrl: 'app/custom/custom.html',
         controller: 'CustomController',
         controllerAs: 'custom'
+      })
+      .when('/faq', {
+        templateUrl: 'app/faq/faq.html',
+        controller: 'FaqController',
+        controllerAs: 'faq'
       })
 
       .otherwise({

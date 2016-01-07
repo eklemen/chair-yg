@@ -14,8 +14,8 @@
 	.section1{
 		clear: both;
 		height: 700px;
-		&#about{
-			height: 450px;
+		&.section3{
+			height: 300px;
 		}
 		.background{
 			display: flex;
@@ -98,7 +98,9 @@
 		    padding-right: 5%;
 
 			.md-block{
-				// width: 33%;
+				textarea{
+					height: 65px;
+				}
 			}
 			@media(max-width: 768px){
 				padding: 0;
