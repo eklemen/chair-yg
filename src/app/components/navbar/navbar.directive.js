@@ -1,51 +1,45 @@
 (function() {
-  'use strict';
+	'use strict';
 
-  angular
-    .module('chairYg')
-    .directive('acmeNavbar', acmeNavbar);
+	angular
+		.module('chairYg')
+		.directive('acmeNavbar', acmeNavbar);
 
-  /** @ngInject */
-  function acmeNavbar() {
-    var directive = {
-      restrict: 'E',
-      templateUrl: 'app/components/navbar/navbar.html',
-      controller: NavbarController,
-      controllerAs: 'vm',
-      bindToController: true
-    };
+	/** @ngInject */
+	function acmeNavbar() {
+		var directive = {
+			restrict: 'E',
+			templateUrl: 'app/components/navbar/navbar.html',
+			controller: NavbarController,
+			controllerAs: 'vm',
+			bindToController: true
+		};
 
-    return directive;
+		return directive;
 
-    /** @ngInject */
-    function NavbarController($scope, $mdSidenav, $rootScope) {
-      var vm = this;
+		/** @ngInject */
+		function NavbarController($scope, $mdSidenav, $rootScope) {
+			var vm = this;
+			
+		vm.openMenu = function(){
+			return $mdSidenav('menu').toggle();
+		};
 
-      // vm.toggle = angular.noop;
-      //   vm.isOpen = function() { return false };
-        
-      //   $mdComponentRegistry
-      //     .when('left')
-      //     .then( function(sideNav){
+		vm.toggle = function () {
+			$scope.$emit('isOpen', vm.openMenu)
+		};
+		vm.close = function() {
+			$scope.$emit('closeMenu', function(){$mdSidenav('menu').close()});
+		 // $rootScope.isOpen = false;
+		};
 
-      //   $rootScope.isOpen = angular.bind( sideNav, sideNav.isOpen );
-      //   $rootScope.toggle = angular.bind( sideNav, sideNav.toggle );
 
-      // });
-      vm.toggle = function () {
-          $mdSidenav('left').toggle();
-        };
+		$scope.$on('$routeChangeStart', function(next, current) { 
+			vm.close();
+		});
 
-      vm.close = function() {
-        $mdSidenav('left').close();
-      };
-
-      $scope.$on('$routeChangeStart', function(next, current) { 
-        vm.close();
-      });
-
-      
-    }
-  }
+			
+		}
+	}
 
 })();

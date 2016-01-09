@@ -55,6 +55,27 @@ html {
   visibility: hidden;
 }
 
+// .isOpen {
+//   position: fixed;
+//   overflow: hidden;
+// }
+body {
+  height:100%
+}
+
+[ng-app] {
+  height:100%
+}
+
+.md-sidenav-backdrop{
+  position: fixed;
+  overflow: hidden;
+}
+.material-sidenav-left:not(.md-close){
+    position: fixed;
+    overflow: hidden;
+}
+
 [layout=row] {
   flex-direction: row;
 }
