@@ -55,13 +55,15 @@ html {
   visibility: hidden;
 }
 
-// .isOpen {
-//   position: fixed;
-//   overflow: hidden;
-// }
+.width-fix {
+  max-width: 700px;
+  margin: 0 auto;
+}
 body {
   height:100%
 }
+
+
 
 [ng-app] {
   height:100%

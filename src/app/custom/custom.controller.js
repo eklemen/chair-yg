@@ -22,13 +22,13 @@
 				'error');
 		};
 		self.animateElementIn = function($el) {
-		  $el.removeClass('hidden');
-		  $el.addClass('animated fadeInUp'); // this example leverages animate.css classes 
+			$el.removeClass('hidden');
+			$el.addClass('animated fadeInUp'); // this example leverages animate.css classes 
 		};
 		 
 		self.animateElementOut = function($el) {
-		  $el.addClass('hidden');
-		  $el.removeClass('animated fadeInUp'); // this example leverages animate.css classes 
+			$el.addClass('hidden');
+			$el.removeClass('animated fadeInUp'); // this example leverages animate.css classes 
 		};
 
 		self.sendMessage = function() {

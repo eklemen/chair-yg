@@ -7,7 +7,7 @@
 	</div>
 	<div flex class="width-fix">
 		<md-list>
-			<md-list-item class="md-2-line hidden" when-visible="custom.animateElementIn" when-not-visible="custom.animateElementOut">
+			<md-list-item class="md-2-line hidden" when-visible="custom.animateElementIn">
 				<h3 class="step-number">Step 1</h3>
 				<div class="md-list-item-text">
 					<h3>The Meeting</h3>
@@ -15,7 +15,7 @@
 				</div>
 			</md-list-item>
 		
-			<md-list-item class="md-2-line hidden" when-visible="custom.animateElementIn" when-not-visible="custom.animateElementOut">
+			<md-list-item class="md-2-line hidden" when-visible="custom.animateElementIn">
 				<h3 class="step-number">Step 2</h3>
 				<div class="md-list-item-text">
 					<h3>The Drawing Board</h3>
@@ -23,7 +23,7 @@
 				</div>
 			</md-list-item>
 		
-			<md-list-item class="md-2-line hidden" when-visible="custom.animateElementIn" when-not-visible="custom.animateElementOut">
+			<md-list-item class="md-2-line hidden" when-visible="custom.animateElementIn">
 				<h3 class="step-number">Step 3</h3>
 				<div class="md-list-item-text">
 					<h3>Finalize the Contract</h3>
@@ -31,7 +31,7 @@
 				</div>
 			</md-list-item>
 		
-			<md-list-item class="md-2-line hidden" when-visible="custom.animateElementIn" when-not-visible="custom.animateElementOut">
+			<md-list-item class="md-2-line hidden" when-visible="custom.animateElementIn">
 				<h3 class="step-number">Step 4</h3>
 				<div class="md-list-item-text">
 					<h3>Construction</h3>
@@ -39,7 +39,7 @@
 				</div>
 			</md-list-item>
 		
-			<md-list-item class="md-2-line hidden" when-visible="custom.animateElementIn" when-not-visible="custom.animateElementOut">
+			<md-list-item class="md-2-line hidden" when-visible="custom.animateElementIn">
 				<h3 class="step-number">Step 5</h3>
 				<div class="md-list-item-text">
 					<h3>Delivery</h3>
@@ -54,22 +54,22 @@
 		<form ng-submit="custom.sendMessage(message)" name="emailForm" flex>
 			<div>
 
-				<md-input-container class="md-icon-float md-block">
-					<label>Name</label>
+				<md-input-container md-no-float="" class="md-block">
+					<!-- <label>Name</label> -->
 					<md-icon class="material-icons md-mainColor icon">person</md-icon>
-					<input name="name" ng-model="custom.message.name" required="true">
+					<input name="name" ng-model="custom.message.name" required="true" placeholder="Name">
 				</md-input-container>
 
-				<md-input-container class="md-icon-float md-block">
-					<label>Email</label>
+				<md-input-container md-no-float="" class="md-block">
+					<!-- <label>Email</label> -->
 					<md-icon class="material-icons md-mainColor icon">email</md-icon>
-					<input name="_replyto" ng-model="custom.message._replyto" required="true" ng-pattern="/^.+@.+\..+$/">
+					<input name="_replyto" ng-model="custom.message._replyto" required="true" ng-pattern="/^.+@.+\..+$/" placeholder="Email">
 				</md-input-container>
 
-				<md-input-container class="md-icon-float md-block">
-					<label>Phone Number</label>
+				<md-input-container md-no-float="" class="md-block">
+					<!-- <label>Phone Number</label> -->
 					<md-icon class="material-icons md-mainColor icon">phone</md-icon>
-					<input ng-model="custom.message.phone" required="true">
+					<input ng-model="custom.message.phone" required="true" placeholder="Phone Number">
 				</md-input-container>
 
 				<!-- <md-input-container class="md-block">
@@ -80,29 +80,30 @@
 					</md-select>
 				</md-input-container> -->
 
-				<md-input-container class="md-icon-float md-block">
-					<label>Type of Event</label>
+				<md-input-container md-no-float="" class="md-block">
+					<!-- <label>Type of Event</label> -->
 					<md-icon class="material-icons md-mainColor icon">star_border</md-icon>
-					<input name="name" ng-model="custom.message.eventType">
+					<input name="name" ng-model="custom.message.eventType" placeholder="Type of Event">
 				</md-input-container>
 
-				<md-input-container class="md-icon-float md-block">
-					<label>Location of Event</label>
+				<md-input-container md-no-float="" class="md-block">
+					<!-- <label>Location of Event</label> -->
 					<md-icon class="material-icons md-mainColor icon">location_on</md-icon>
-					<input name="name" ng-model="custom.message.location">
+					<input name="name" ng-model="custom.message.location" placeholder="Location of Event">
 				</md-input-container>
 				
-				<md-datepicker ng-model="custom.message.date" md-placeholder="Date">
-				</md-datepicker>
+				<div flex="100" class="datepicker">
+					<md-datepicker md-no-float="" ng-model="custom.message.location" md-placeholder="Enter date"></md-datepicker>
+				</div>
 
-				<md-input-container class="md-icon-float md-block">
+				<md-input-container md-no-float="" class="md-block">
 					<!-- <label>Message</label> -->
 					<md-icon class="material-icons md-mainColor icon">border_color</md-icon>
 					<textarea ng-model="custom.message.body" name="message" columns="1" rows="3" placeholder="Enter any additional information here..." required="true"></textarea>
 				</md-input-container>
 				<input type="text" name="_gotcha" style="display:none" />
 				<input type="hidden" name="_next" value="#" />
-				<md-button flex="50" class="md-raised md-primary" type="submit" value="Send">Send</md-button>
+				<md-button class="md-raised md-primary" type="submit" value="Send">Send</md-button>
 			</div>
 		</form>
 	</div>

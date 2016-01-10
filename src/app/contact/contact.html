@@ -9,19 +9,17 @@
 		<form ng-submit="con.sendMessage(message)" name="emailForm" flex>
 			<div>
 
-				<md-input-container class="md-icon-float md-block">
-					<label>Name</label>
+				<md-input-container md-no-float="" class="md-block">
 					<md-icon class="material-icons md-mainColor icon">person</md-icon>
-					<input name="name" ng-model="con.message.name" required="true">
+					<input name="name" ng-model="con.message.name" required="true" placeholder="Name">
 					<!-- <div ng-messages="con.message.name.$error">
 						<div ng-message="required">Please enter your name</div>
 					</div> -->
 				</md-input-container>
 
-				<md-input-container class="md-icon-float md-block">
-					<label>Email</label>
+				<md-input-container md-no-float="" class="md-block">
 					<md-icon class="material-icons md-mainColor icon">email</md-icon>
-					<input name="_replyto" ng-model="con.message._replyTo" required="true" ng-pattern="/^.+@.+\..+$/">
+					<input name="_replyto" ng-model="con.message._replyTo" required="true" ng-pattern="/^.+@.+\..+$/" placeholder="email">
 					
 					<!-- <div ng-messages="con.message.name.$error" role="alert">
 			  <div ng-message-exp="['required', 'pattern']">
@@ -30,7 +28,7 @@
 			</div> -->
 				</md-input-container>
 
-				<md-input-container class="md-block">
+				<md-input-container md-no-float="" class="md-block">
 					<label>Subject</label>
 					<!-- <md-icon class="material-icons md-mainColor icon">person</md-icon> -->
 					<!-- <input name="name" ng-model="con.message.name" required="true"> -->
@@ -41,8 +39,7 @@
 					</md-select>
 				</md-input-container>
 
-				<md-input-container class="md-icon-float md-block">
-					<label>Message</label>
+				<md-input-container md-no-float="" class="md-block">
 					<md-icon class="material-icons md-mainColor icon">border_color</md-icon>
 					<textarea ng-model="con.message.body" name="message" columns="1" rows="3" placeholder="Enter your message here..." required="true"></textarea>
 					<!-- <div ng-messages="message.name.$error">
@@ -51,14 +48,8 @@
 				</md-input-container>
 				<input type="text" name="_gotcha" style="display:none" />
 				<input type="hidden" name="_next" value="#" />
-				<md-button flex="50" class="md-raised md-primary" type="submit" value="Send">Send</md-button>
+				<md-button class="md-raised md-primary" type="submit" value="Send">Send</md-button>
 			</div>
 		</form>
-			<!-- <button ng-click="con.alertError()"></button> -->
-			<!-- <div flex="50" hide-sm>
-				<div class="contact-image">
-					<img src="assets/images/ac-repair.png" md-padding alt="">
-				</div>
-			</div> -->
 	</div>
 </md-content>

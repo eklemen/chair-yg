@@ -8,7 +8,6 @@
 	/** @ngInject */
 	function AppCtrl($scope) {
 		var vm = this;
-		debugger;
 		$scope.$on('isOpen', function(event, args){
 			args();
 		});
