@@ -3,15 +3,10 @@
 
   angular
     .module('chairYg')
-    .controller('FaqController', FaqController);
+    .controller('AboutController', AboutController);
 
   /** @ngInject */
-  function FaqController() {
+  function AboutController() {
     var self = this;
-
-    self.active = function(i) {
-      self.isActive = i;
-    }
-
   }
 })();

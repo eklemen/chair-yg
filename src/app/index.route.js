@@ -27,6 +27,11 @@
         controller: 'FaqController',
         controllerAs: 'faq'
       })
+      .when('/about', {
+        templateUrl: 'app/about/about.html',
+        controller: 'AboutController',
+        controllerAs: 'about'
+      })
 
       .otherwise({
         redirectTo: '/'
