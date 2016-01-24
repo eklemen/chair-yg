@@ -51,7 +51,7 @@
 	<div flex class="width-fix form">
 		<p>First we ask you to please fill out the form below and send it back to us. Once we receive your request, we will contact you to begin the process.</p>
 		<p>If you do have any inspirations from pinterest or other pictures, please attach them or send us the links.</p>
-		<form ng-submit="custom.sendMessage(message)" name="emailForm" flex>
+		<form ng-submit="custom.sendMessage(message)" name="form" flex>
 			<div>
 
 				<md-input-container md-no-float="" class="md-block">
@@ -93,7 +93,7 @@
 				</md-input-container>
 				
 				<div flex="100" class="datepicker">
-					<md-datepicker md-no-float="" ng-model="custom.message.location" md-placeholder="Enter date"></md-datepicker>
+					<md-datepicker md-no-float="" ng-model="custom.message.date" md-placeholder="Enter date"></md-datepicker>
 				</div>
 
 				<md-input-container md-no-float="" class="md-block">
@@ -102,7 +102,7 @@
 					<textarea ng-model="custom.message.body" name="message" columns="1" rows="3" placeholder="Enter any additional information here..." required="true"></textarea>
 				</md-input-container>
 				<input type="text" name="_gotcha" style="display:none" />
-				<input type="hidden" name="_next" value="#" />
+				<!-- <input type="hidden" name="_next" value="#" /> -->
 				<md-button class="md-raised md-primary" type="submit" value="Send">Send</md-button>
 			</div>
 		</form>

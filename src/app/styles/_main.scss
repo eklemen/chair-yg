@@ -8,6 +8,9 @@
 }
 
 .main{
+	md-content{
+		width: 100%;
+	}
 	.overflow-hidden{
 		overflow: hidden;
 	}
@@ -30,8 +33,10 @@
 				}
 			}
 			.content{
+				width: 100%;
 				p{
 					background-color: white;
+					max-width: 700px;
 					padding: 20px;
 					border-radius: 5px;
 					line-height: 22px;
@@ -76,6 +81,7 @@
 		display: flex;
 		align-items: center;
 		.info-container{
+			width: 100%;
 			.info-item{
 			    padding: 2%;
 				text-align: center;
@@ -96,6 +102,8 @@
 		.form-container{
 			width: 50%;
 		    padding-right: 5%;
+		    max-width: 600px;
+		    margin: 0 auto;
 
 			.md-block{
 				textarea{

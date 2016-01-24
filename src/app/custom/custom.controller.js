@@ -42,20 +42,23 @@
 				},
 				Accept: 'application/json'
 			 })
-			.success(function(data) {
-					console.log(data);
+			.then(function(data) {
+                console.log(data);
 
-					if (!data.success) {
-						// if not successful, bind errors to error variables
-						self.alertError()
-						self.errorName = data.errors.name;
-						self.errorSuperhero = data.errors.superheroAlias;
-					} else {
-						// if successful, bind success message to message
-						self.alertSuccess();
-						self.message = data.message;
-					}
-				});
+                if (data.status === 200) {
+                     // if successful, bind success message to message
+                    self.alertSuccess();
+                    self.message = data.message;
+                    self.form.$setPristine();
+                    self.form.$setUntouched();
+                } else {
+                    // if not successful, bind errors to error variables
+                    self.alertError()
+                    // self.errorName = data.errors.name;
+                    self.form.$setPristine();
+                    self.form.$setUntouched();
+                }
+            });
 		}
 
 	}

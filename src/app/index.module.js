@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-	.module('chairYg', ['ngAnimate','ngCookies','ngTouch','ngAria','ngResource','ngRoute','ngMaterial','angular-scroll-animate', 'duScroll'])
+	.module('chairYg', ['ngAnimate','ngCookies', 'ngAria','ngResource','ngRoute','ngMaterial','angular-scroll-animate', 'duScroll'])
 	.controller('AppCtrl', AppCtrl);
 
 	/** @ngInject */
