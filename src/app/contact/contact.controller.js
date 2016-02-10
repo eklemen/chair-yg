@@ -32,21 +32,23 @@
         },
         Accept: 'application/json'
        })
-      .success(function(data) {
-          console.log(data);
+      .then(function(data) {
+                console.log(data);
 
-          if (!data.success) {
-            // if not successful, bind errors to error variables
-            self.alertError()
-            self.errorName = data.errors.name;
-            self.errorSuperhero = data.errors.superheroAlias;
-          } else {
-            // if successful, bind success message to message
-            self.alertSuccess();
-            self.message = data.message;
-          }
-        });
-      console.log('banana');
+                if (data.status === 200 && self.emailForm.$valid) {
+                     // if successful, bind success message to message
+                    self.alertSuccess();
+                    self.message = data.message;
+                    self.emailForm.$setPristine();
+                    self.emailForm.$setUntouched();
+                } else {
+                    // if not successful, bind errors to error variables
+                    self.alertError()
+                    // self.errorName = data.errors.name;
+                    self.emailForm.$setPristine();
+                    self.emailForm.$setUntouched();
+                }
+            });
     }
 
   }

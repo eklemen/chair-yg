@@ -2,11 +2,37 @@
 	<div flex>
 		<div class="contact-text">
 			<p>Please feel free to contact us at anytime to ask questions, order, or simply get our opinions. We are able to be reached via Facebook, call/text, or fill out the email form on this page.</p>
-			<p>To get a quote, simply select <b>Request a Quote</b> in the Subject section of the email form, and we will reply to you as soon as possible.</p>
+		</div>
+		<div class="contact-direct" layout="column" layout-margin>
+			<div>
+				<span>Call today</span>
+				<div>
+					<md-icon class="material-icons md-mainColor icon">phone</md-icon>
+					<a class="no-decoration" href="tel:1-248-421-3502">248-421-3502</a>
+				</div>
+
+			</div>
+			<div>
+				<span>Email Address</span>
+				<div>
+					<md-icon class="material-icons md-mainColor icon">email</md-icon>
+					dazzlingdecorentals@gmail.com
+				</div>
+			</div>
+			<div>
+				<span>Find us on Facebook</span>
+				<div>
+					<i class="fa fa-facebook-square"></i>
+					<a target="_blank" href="https://www.facebook.com/Dazzling-Deco-1521299101531028/" class="no-decoration">
+						<span>Dazzling Deco</span>
+					</a>
+				</div>
+			</div>
 		</div>
 	</div>
 	<div flex>
-		<form ng-submit="con.sendMessage(message)" name="emailForm" flex>
+		<p>Fill out the form below and we will return your email promptly.</p>
+		<form ng-submit="con.sendMessage(message)" name="contact.emailForm" flex>
 			<div>
 
 				<md-input-container md-no-float="" class="md-block">
@@ -29,17 +55,6 @@
 				</md-input-container>
 
 				<md-input-container md-no-float="" class="md-block">
-					<label>Subject</label>
-					<!-- <md-icon class="material-icons md-mainColor icon">person</md-icon> -->
-					<!-- <input name="name" ng-model="con.message.name" required="true"> -->
-
-					<md-select ng-model="con.message.subject">
-						<md-option value="General-Info">General Information</md-option>
-						<md-option value="Request-Quote">Request a Quote</md-option>
-					</md-select>
-				</md-input-container>
-
-				<md-input-container md-no-float="" class="md-block">
 					<md-icon class="material-icons md-mainColor icon">border_color</md-icon>
 					<textarea ng-model="con.message.body" name="message" columns="1" rows="3" placeholder="Enter your message here..." required="true"></textarea>
 					<!-- <div ng-messages="message.name.$error">
@@ -48,7 +63,7 @@
 				</md-input-container>
 				<input type="text" name="_gotcha" style="display:none" />
 				<input type="hidden" name="_next" value="#" />
-				<md-button class="md-raised md-primary" type="submit" value="Send">Send</md-button>
+				<md-button class="md-raised md-primary" type="submit" ng-disabled="contact.emailForm.$invalid" value="Send">Send</md-button>
 			</div>
 		</form>
 	</div>

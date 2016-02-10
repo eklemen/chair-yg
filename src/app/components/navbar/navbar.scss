@@ -21,6 +21,9 @@
 	.nav-links{
 		@include hide-below();
 	}
+	.top-logo{
+		margin-left: 25px;
+	}
 }
 
 // sidenav partial

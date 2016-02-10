@@ -32,6 +32,11 @@
         controller: 'AboutController',
         controllerAs: 'about'
       })
+      .when('/gallery', {
+        templateUrl: 'app/gallery/gallery.html',
+        controller: 'GalleryController',
+        controllerAs: 'gallery'
+      })
 
       .otherwise({
         redirectTo: '/'

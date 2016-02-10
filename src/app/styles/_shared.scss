@@ -3,6 +3,8 @@
 	font-size: $size;
 }
 
+// $lightblue: #c9eef0 !important;
+
 body{
 	font-family: 'Raleway', sans-serif;
 	.row{
@@ -11,6 +13,9 @@ body{
 	}
 }
 
+.image-click {
+    cursor: pointer;
+}
 
 @mixin hide-below($size: 680px){
 	@media(max-width: $size){

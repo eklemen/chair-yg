@@ -45,18 +45,18 @@
 			.then(function(data) {
                 console.log(data);
 
-                if (data.status === 200) {
+                if (data.status === 200 && self.emailForm.$valid) {
                      // if successful, bind success message to message
                     self.alertSuccess();
                     self.message = data.message;
-                    self.form.$setPristine();
-                    self.form.$setUntouched();
+                    self.emailForm.$setPristine();
+                    self.emailForm.$setUntouched();
                 } else {
                     // if not successful, bind errors to error variables
                     self.alertError()
                     // self.errorName = data.errors.name;
-                    self.form.$setPristine();
-                    self.form.$setUntouched();
+                    self.emailForm.$setPristine();
+                    self.emailForm.$setUntouched();
                 }
             });
 		}
