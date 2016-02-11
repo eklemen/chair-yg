@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-	.module('chairYg', ['ngAnimate','ngCookies', 'ngAria','ngResource','ngRoute','ngMaterial','angular-scroll-animate', 'duScroll'])
+	.module('chairYg', ['ngAnimate','ngCookies', 'ngAria','ngResource','ngRoute','ngSanitize','ngMaterial','angular-scroll-animate', 'duScroll'])
 
 	.directive('mdLightbox', ['$mdDialog', function($mdDialog){
 		return {
@@ -23,6 +23,8 @@
 						templateUrl: './app/gallery/screenshot.html',
 						clickOutsideToClose: true,
 						controller: lightboxController,
+						// try moving this to GalleryController
+						// or maybe $emit/$broadcast this data to the parent controller (more reusable)
 						controllerAs: 'lb'
 					});
 

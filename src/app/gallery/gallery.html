@@ -1,10 +1,13 @@
 <md-content class="gallery" layout="column" layout-gt-sm="row">
-	<div flex>
-		<div class="">
-			<p>Gallery coming soon!</p>
-			<div data-ng-repeat="img in gallery.images">
-				<img data-ng-src="{{img.src}}" md-lightbox md-lightbox-title="Demo Plunkr" alt="">
-			</div>
+	<div class="container">
+		<div class="images-container" layout="row" layout-wrap layout-align="start center">
+			<md-whiteframe class="image image{{$index}} md-whiteframe-2dp" 
+				data-ng-repeat="img in gallery.images track by $index"
+				layout="column" layout-align="center center" flex-xs="80" flex-gt-xs="45" flex-gt-sm="30">
+				<img data-ng-src="{{img.src}}" md-lightbox alt="" />
+				<h5 data-ng-bind-html="img.title"></h5>
+				<p data-ng-bind-html="img.caption"></p>
+			</md-whiteframe>
 			<!-- <img src="http://placehold.it/350x150" md-lightbox md-lightbox-title="Demo Plunkr"> -->
 		</div>
 		

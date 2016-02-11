@@ -1,6 +1,39 @@
 .gallery{
-	div{
-	margin-top: 60px;
+	.container{
+		margin-top: 90px;
+		.images-container{
+			.image{
+				min-width: 290px;
+				// max-width: 30%;
+				// height: 320px !important;
+				margin: 20px auto;
+				padding: 10px;
+				@media(max-width: 599px){
+					width: 90% !important;
+				}
+				img{
+					margin: 0 auto;
+					display: block;
+				}
+				h5, p{
+					margin: 10px auto 0 auto;
+				}
+			}
+		}
+	}	
+}
+
+// for gallery modal
+.gallery-popup{
+	max-width: 90%;
+	.close-popup{
+		// position: absolute;
+		// right: -6px;
+		// top: -6px;
+		// border-radius: 50%;
 	}
-	
+	.image-popup{
+		width: 100% !important;
+		margin-bottom: -4px
+	}
 }
