@@ -1,6 +1,11 @@
 .gallery{
 	.container{
 		margin-top: 90px;
+		div{
+			h2{
+				padding-left: 40px;
+			}
+		}
 		.images-container{
 			.image{
 				min-width: 290px;

@@ -11,23 +11,23 @@
       self.images =[
         {
           src: 'assets/images/flower-unlit.JPG',
-          title: 'Flower 1',
-          caption: 'This is a flower backdrop'
+          title: 'The Standard',
+          caption: 'Our standard 4 x 8.'
         },
         {
           src: 'assets/images/flower-lit.JPG',
-          title: 'Flower 2',
-          caption: 'This is also a flower backdrop'
+          title: 'The Standard Plus',
+          caption: 'Backlights added to a standard board.'
         },
         {
           src: 'assets/images/flower2-sm.JPG',
-          title: 'Flower 3',
-          caption: 'More stuff for a caption'
+          title: 'Close Up 1',
+          caption: 'Details of the board.'
         },
         {
           src: 'assets/images/flower3-sm.JPG',
-          title: 'Flower 4',
-          caption: 'Ah a nice flower wall'
+          title: 'Close Up 2',
+          caption: 'A more detailed look.'
         },
         {
           src: 'assets/images/flower3-sm.JPG',

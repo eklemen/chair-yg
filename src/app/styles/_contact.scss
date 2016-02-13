@@ -45,6 +45,16 @@
 				margin-left: 5%;
 			}
 		}
+		md-input-container{
+			input{
+				height: 45px;
+				padding: 8px 0;
+			}
+			textarea{
+				height: 55px;
+				padding: 8px 0 8px 36px;
+			}
+		}
 	}
 	&.custom{
 		form{

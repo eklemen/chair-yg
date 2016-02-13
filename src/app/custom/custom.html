@@ -51,25 +51,27 @@
 	<div flex class="width-fix form">
 		<p>First we ask you to please fill out the form below and send it back to us. Once we receive your request, we will contact you to begin the process.</p>
 		<p>If you do have any inspirations from pinterest or other pictures, please attach them or send us the links.</p>
+		<br>
+		<p>Required fields marked with <b>*</b></p>
 		<form ng-submit="custom.sendMessage(message)" name="custom.emailForm" flex>
 			<div>
 
 				<md-input-container md-no-float="" class="md-block">
 					<!-- <label>Name</label> -->
 					<md-icon class="material-icons md-mainColor icon">person</md-icon>
-					<input name="name" ng-model="custom.message.name" required="true" placeholder="Name">
+					<input name="name" ng-model="custom.message.name" required="true" placeholder="Name *">
 				</md-input-container>
 
 				<md-input-container md-no-float="" class="md-block">
 					<!-- <label>Email</label> -->
 					<md-icon class="material-icons md-mainColor icon">email</md-icon>
-					<input name="_replyto" ng-model="custom.message._replyto" required="true" ng-pattern="/^.+@.+\..+$/" placeholder="Email">
+					<input name="_replyto" ng-model="custom.message._replyto" required="true" ng-pattern="/^.+@.+\..+$/" placeholder="Email *">
 				</md-input-container>
 
 				<md-input-container md-no-float="" class="md-block">
 					<!-- <label>Phone Number</label> -->
 					<md-icon class="material-icons md-mainColor icon">phone</md-icon>
-					<input ng-model="custom.message.phone" required="true" placeholder="Phone Number">
+					<input ng-model="custom.message.phone" required="true" placeholder="Phone Number *">
 				</md-input-container>
 
 				<!-- <md-input-container class="md-block">
@@ -99,7 +101,7 @@
 				<md-input-container md-no-float="" class="md-block">
 					<!-- <label>Message</label> -->
 					<md-icon class="material-icons md-mainColor icon">border_color</md-icon>
-					<textarea ng-model="custom.message.body" name="message" columns="1" rows="3" placeholder="Enter any additional information here..." required="true"></textarea>
+					<textarea ng-model="custom.message.body" name="message" columns="1" rows="3" placeholder="Message *" required="true"></textarea>
 				</md-input-container>
 				<input type="text" name="_gotcha" style="display:none" />
 				<!-- <input type="hidden" name="_next" value="#" /> -->
