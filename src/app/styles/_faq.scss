@@ -33,6 +33,12 @@
 		}
 	}
 	.to-top{
+		display: none;
+		transition: opacity .25s ease-in-out;
+		
+	}
+	.min{
+		display: block;
 		position: fixed;
 		right: 5px;
 		bottom: 30%;

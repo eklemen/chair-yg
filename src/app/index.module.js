@@ -44,6 +44,20 @@
 			}
 		}
 	}])
+	.directive('backTop', function($window) {
+	  return {
+	    link: function(scope, element, attrs) {
+	    	angular.element($window).bind("scroll", function() {
+	             if (this.pageYOffset >= 200) {
+	                 scope.boolChangeClass = true;
+	             } else {
+	                 scope.boolChangeClass = false;
+	             }
+	            scope.$apply();
+	        });
+	    }
+	  };
+	})
 	.controller('AppCtrl', AppCtrl);
 
 	/** @ngInject */
