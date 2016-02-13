@@ -38,32 +38,18 @@
 
                 if (data.status === 200 && self.emailForm.$valid) {
                      // if successful, bind success message to message
-                    debugger;
                     self.alertSuccess();
                     self.message = data.message;
                     self.emailForm.$setPristine();
                     self.emailForm.$setUntouched();
                 } else {
                     // if not successful, bind errors to error variables
-                    debugger;
                     self.alertError()
                     // self.errorName = data.errors.name;
-                    self.emailForm.$setPristine();
-                    self.emailForm.$setUntouched();
+                    // self.emailForm.$setPristine();
+                    // self.emailForm.$setUntouched();
                 }
             });
     }
-
-    
-    self.animateElementIn = function($el) {
-      $el.removeClass('hidden');
-      $el.addClass('animated fadeInUp');
-    };
-
-    // self.classAnimation = '';
-    // function showToastr() {
-    //   self.classAnimation = '';
-    // }
-
   }
 })();

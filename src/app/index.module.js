@@ -10,15 +10,16 @@
 
 				elem.addClass('image-click');
 
-				elem.on('click',function(){     
-					var image = attrs.src;
+				elem.on('click',function(){
+					var image = attrs.ngSrc;
 					var title = attrs.mdLightboxTitle;
-					showLightboxModal(image, title);
+					var subCap = attrs.caption;
+					showLightboxModal(image, title, subCap);
 					
 				});
 
 				//Lightbox Modal
-				function showLightboxModal(image, title) {
+				function showLightboxModal(image, title, subCap) {
 					var confirm = $mdDialog.confirm({
 						templateUrl: './app/gallery/screenshot.html',
 						clickOutsideToClose: true,
@@ -46,16 +47,16 @@
 	}])
 	.directive('backTop', function($window) {
 	  return {
-	    link: function(scope, element, attrs) {
-	    	angular.element($window).bind("scroll", function() {
-	             if (this.pageYOffset >= 200) {
-	                 scope.boolChangeClass = true;
-	             } else {
-	                 scope.boolChangeClass = false;
-	             }
-	            scope.$apply();
-	        });
-	    }
+		link: function(scope, element, attrs) {
+			angular.element($window).bind("scroll", function() {
+				 if (this.pageYOffset >= 200) {
+					 scope.boolChangeClass = true;
+				 } else {
+					 scope.boolChangeClass = false;
+				 }
+				scope.$apply();
+			});
+		}
 	  };
 	})
 	.controller('AppCtrl', AppCtrl);

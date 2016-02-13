@@ -93,7 +93,7 @@
 				</md-input-container>
 				
 				<div flex="100" class="datepicker">
-					<md-datepicker md-no-float="" ng-model="custom.message.date" md-placeholder="Enter date"></md-datepicker>
+					<md-datepicker ng-click="custom.deb" md-no-float="" ng-model="custom.message.date" md-placeholder="Enter date"></md-datepicker>
 				</div>
 
 				<md-input-container md-no-float="" class="md-block">
@@ -103,7 +103,7 @@
 				</md-input-container>
 				<input type="text" name="_gotcha" style="display:none" />
 				<!-- <input type="hidden" name="_next" value="#" /> -->
-				<md-button class="md-raised md-primary" type="submit" value="Send">Send</md-button>
+				<md-button class="md-raised md-primary" type="submit" ng-disabled="custom.emailForm.$invalid" value="Send">Send</md-button>
 			</div>
 		</form>
 	</div>

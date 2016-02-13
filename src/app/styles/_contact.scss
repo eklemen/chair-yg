@@ -67,6 +67,8 @@
 					}
 					.md-datepicker-input-container{
 						width: 94%;
+						border-bottom: solid #e1e1e1 1px;
+						padding-bottom: 11px;
 					}
 					.md-datepicker-triangle-button{
 						@include hide-below();
@@ -80,7 +82,7 @@
 				}
 				textarea{
 					height: 55px;
-					padding: 8px 0;
+					padding: 8px 0 8px 36px;
 				}
 			}
 		}

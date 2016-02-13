@@ -61,7 +61,7 @@ html {
   margin: 0 auto;
 }
 body {
-  height:100%
+  height:100%;
 }
 
 
@@ -81,6 +81,10 @@ body {
 
 [layout=row] {
   flex-direction: row;
+}
+
+.md-calendar-date-selection-indicator:hover{
+  background-color: rgb(201,238,240);
 }
 
 

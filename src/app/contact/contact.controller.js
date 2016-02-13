@@ -45,8 +45,8 @@
                     // if not successful, bind errors to error variables
                     self.alertError()
                     // self.errorName = data.errors.name;
-                    self.emailForm.$setPristine();
-                    self.emailForm.$setUntouched();
+                    // self.emailForm.$setPristine();
+                    // self.emailForm.$setUntouched();
                 }
             });
     }

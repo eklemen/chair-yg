@@ -9,17 +9,20 @@
 		height: 53px;
 		margin: 0 auto -5px auto;
 		border-radius: 0;
-		div{
+		div{ 
 			height: 100%;
 		}
 
 	}
 	//hamburger menu
 	.side-nav{
-		@include hide-above();
+		@include hide-above($size: 701px);
 	}
 	.nav-links{
-		@include hide-below();
+		@include hide-below($size: 700px);
+		md-menu-bar{
+			padding: 0 10px;
+		}
 	}
 	.top-logo{
 		margin-left: 25px;
