@@ -13,15 +13,15 @@
 				elem.on('click',function(){
 					var image = attrs.ngSrc;
 					var title = attrs.mdLightboxTitle;
-					var subCap = attrs.caption;
-					showLightboxModal(image, title, subCap);
+					// var subCap = attrs.caption;
+					showLightboxModal(image, title);
 					
 				});
 
 				//Lightbox Modal
-				function showLightboxModal(image, title, subCap) {
+				function showLightboxModal(image, title) {
 					var confirm = $mdDialog.confirm({
-						templateUrl: './app/gallery/screenshot.html',
+						templateUrl: 'screenshot.html',
 						clickOutsideToClose: true,
 						controller: lightboxController,
 						// try moving this to GalleryController
