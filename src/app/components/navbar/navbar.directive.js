@@ -18,21 +18,49 @@
 		return directive;
 
 		/** @ngInject */
-		function NavbarController($scope, $mdSidenav, $rootScope) {
+		function NavbarController($scope, $mdSidenav, $rootScope, $timeout, $log) {
 			var vm = this;
-			
-		vm.openMenu = function(){
-			return $mdSidenav('menu').toggle();
+			vm.toggleLeft = buildDelayedToggler('left');
+
+			function debounce(func, wait, context) {
+     			var timer;
+			    return function debounced() {
+			        var context = $scope,
+			        args = Array.prototype.slice.call(arguments);
+			        $timeout.cancel(timer);
+			        timer = $timeout(function() {
+			          timer = undefined;
+			          func.apply(context, args);
+	        		}, wait || 10);
+      			};
+    		}
+    /**
+     * Build handler to open/close a SideNav; when animation finishes
+     * report completion in console
+     */
+		    function buildDelayedToggler(navID) {
+		      return debounce(function() {
+		        $mdSidenav(navID)
+		          .toggle()
+		          .then(function () {
+		            $log.debug("toggle " + navID + " is done");
+		          });
+		      }, 200);
+		    }
+		    function buildToggler(navID) {
+		      return function() {
+		        $mdSidenav(navID)
+		          .toggle()
+		          .then(function () {
+		            $log.debug("toggle " + navID + " is done");
+		          });
+		      }
+		    }
+		this.close = function () {
+		    $mdSidenav('left').then(function(leftNav) { leftNav.close(); });
 		};
 
-		vm.toggle = function () {
-			$scope.$emit('isOpen', vm.openMenu)
-		};
-		vm.close = function() {
-			$scope.$emit('closeMenu', function(){$mdSidenav('menu').close()});
-		 // $rootScope.isOpen = false;
-		};
-
+		
 
 		$scope.$on('$routeChangeStart', function(next, current) { 
 			vm.close();
