@@ -8,9 +8,6 @@
 		}
 		.images-container{
 			.image{
-				min-width: 290px;
-				// max-width: 30%;
-				// height: 320px !important;
 				margin: 20px auto;
 				padding: 10px;
 				@media(max-width: 599px){
@@ -19,9 +16,7 @@
 				img{
 					margin: 0 auto;
 					display: block;
-				}
-				h5, p{
-					margin: 10px auto 0 auto;
+					width: 100%;
 				}
 			}
 		}

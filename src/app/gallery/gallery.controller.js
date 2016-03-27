@@ -11,28 +11,28 @@
       self.images =[
         {
           src: 'assets/images/flower-unlit.JPG',
-          title: 'The Standard',
-          caption: 'Our standard 4 x 8.'
+          title: '',
+          caption: ''
         },
         {
           src: 'assets/images/flower-lit.JPG',
-          title: 'The Standard Plus',
-          caption: 'Backlights added to a standard board.'
+          title: '',
+          caption: ''
         },
         {
           src: 'assets/images/flower2-sm.JPG',
-          title: 'Close Up 1',
-          caption: 'Details of the board.'
+          title: '',
+          caption: ''
         },
         {
           src: 'assets/images/flower3-sm.JPG',
-          title: 'Close Up 2',
-          caption: 'A more detailed look.'
+          title: '',
+          caption: ''
         },
         {
           src: 'assets/images/flower3-sm.JPG',
-          title: 'Flower 4',
-          caption: 'Ah a nice flower wall'
+          title: '',
+          caption: ''
         }
       ]
   }

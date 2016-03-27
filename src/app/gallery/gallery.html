@@ -2,20 +2,22 @@
 	<div class="container">
 		<div flex><h2>Gallery</h2></div>
 		<div class="images-container" layout="row" layout-wrap layout-align="start center">
-			<md-whiteframe class="image image{{$index}} md-whiteframe-2dp" 
+			<!-- <md-whiteframe class="image image{{$index}} md-whiteframe-2dp" 
 				data-ng-repeat="img in gallery.images track by $index"
 				layout="column" layout-align="center center" flex-xs="80" flex-gt-xs="45" flex-gt-sm="30">
 				<img data-ng-src="{{img.src}}" md-lightbox md-lightbox-title="{{img.title}}" alt="" />
 				<h5 data-ng-bind-html="img.title"></h5>
 				<p data-ng-bind-html="img.caption"></p>
-			</md-whiteframe>
-			<!-- <img src="http://placehold.it/350x150" md-lightbox md-lightbox-title="Demo Plunkr"> -->
+			</md-whiteframe> -->
+			<div class="image" data-ng-repeat="img in gallery.images" flex="50">
+				<img src="{{img.src}}" />			
+			</div>
 		</div>
 		
 	</div>
 </md-content>
 
-<script type="text/ng-template" id="screenshot.html">
+<!-- <script type="text/ng-template" id="screenshot.html">
 	<md-dialog aria-label="Screenshot" class="gallery-popup">
 	  <md-toolbar>
 	    <div class="md-toolbar-tools">
@@ -30,4 +32,4 @@
 	      <img ng-src="{{lb.image}}" alt="{{title}}" class="image-popup">
 	  </md-dialog-content>
 	</md-dialog>
-</script>
+</script> -->
