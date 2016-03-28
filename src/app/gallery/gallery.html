@@ -1,35 +1,61 @@
 <md-content class="gallery" layout="column" layout-gt-sm="row">
 	<div class="container">
 		<div flex><h2>Gallery</h2></div>
-		<div class="images-container" layout="row" layout-wrap layout-align="start center">
-			<!-- <md-whiteframe class="image image{{$index}} md-whiteframe-2dp" 
-				data-ng-repeat="img in gallery.images track by $index"
-				layout="column" layout-align="center center" flex-xs="80" flex-gt-xs="45" flex-gt-sm="30">
-				<img data-ng-src="{{img.src}}" md-lightbox md-lightbox-title="{{img.title}}" alt="" />
-				<h5 data-ng-bind-html="img.title"></h5>
-				<p data-ng-bind-html="img.caption"></p>
-			</md-whiteframe> -->
-			<div class="image" data-ng-repeat="img in gallery.images" flex="50">
-				<img src="{{img.src}}" />			
+		<div class="images-container" layout="row" layout-wrap layout-align-xs="center center" layout-align-gt-xs="start center">
+
+			<!-- Engagement -->
+			<div flex="100" class="section-title">
+				<span class="title">Engagement</span>
+				<span><hr></span>
 			</div>
-		</div>
+			
+			<div class="engagement image" data-ng-repeat="img in gallery.engagement track by $index" flex-xs="100">
+				<div class="image{{$index}}" style="background-image:url('{{img.src}}');"></div>
+			</div>
+
+
+			<!-- Graduation -->
+			<div flex="100" class="section-title">
+				<span class="title">Graduation</span>
+				<span><hr></span>
+			</div>
+			
+			<div class="graduation image" data-ng-repeat="img in gallery.graduation track by $index" flex-xs="100">
+				<div class="image{{$index}}" style="background-image:url('{{img.src}}');"></div>
+			</div>
+
+			<!-- Panel -->
+			<div flex="100" class="section-title">
+				<span class="title">Panels</span>
+				<span><hr></span>
+			</div>
+			
+			<div class="panels image" data-ng-repeat="img in gallery.panels track by $index" flex-xs="100">
+				<div class="image{{$index}}" style="background-image:url('{{img.src}}');"></div>
+			</div>
+
+			<!-- Letter -->
+			<div flex="100" class="section-title">
+				<span class="title">Letters</span>
+				<span><hr></span>
+			</div>
+			
+			<div class="letters image" data-ng-repeat="img in gallery.letters track by $index" flex-xs="100">
+				<div class="image{{$index}}" style="background-image:url('{{img.src}}');"></div>
+			</div>
+
+			<!-- Store -->
+			<div flex="100" class="section-title">
+				<span class="title">Store Front</span>
+				<span><hr></span>
+			</div>
+			
+			<div class="letters image" data-ng-repeat="img in gallery.store track by $index">
+				<div class="image{{$index}}" style="background-image:url('{{img.src}}');"></div>
+			</div>
+
+
+		</div> <!-- end images-container -->
 		
 	</div>
 </md-content>
-
-<!-- <script type="text/ng-template" id="screenshot.html">
-	<md-dialog aria-label="Screenshot" class="gallery-popup">
-	  <md-toolbar>
-	    <div class="md-toolbar-tools">
-	      <h2 ng-bind="lb.title"></h2>
-	      <span flex></span>
-	      <md-button class="md-icon-button" ng-click="lb.cancel()">
-	        <md-icon md-font-library="material-icons" aria-label="Close dialog" class="icon-static">close</md-icon>
-	      </md-button>
-	    </div>
-	  </md-toolbar>
-	  <md-dialog-content>
-	      <img ng-src="{{lb.image}}" alt="{{title}}" class="image-popup">
-	  </md-dialog-content>
-	</md-dialog>
-</script> -->
