@@ -108,5 +108,26 @@
 			}
 		}
 	}
+	&.about{
+		.contact-text{
+			padding-left: 6%;
+			@media(max-width: 600px){
+				text-align: center;
+				padding-left: 0;
+			}
+		}
+		.text-box{
+			max-width: 900px;
+			margin: 0 auto;
+			.paragraph-container{
+				padding-right: 10%;
+			}
+		}
+		img{
+			max-width: 250px;
+			width: 100%;
+
+		}
+	}
 
 }
