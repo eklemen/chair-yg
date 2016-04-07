@@ -26,8 +26,9 @@
             controllerAs:'dialog',
             // bindToController:true,
             parent: angular.element(document.body),
-            template:'<md-dialog aria-label="List dialog">' +
-                '<img src="' + self.imgSrc + '" />' +
+            template:'<div class="close-modal"><i class="fa fa-times"></i></div>' +
+                '<md-dialog aria-label="List dialog">' +
+                '<div><img class="modal-img" src="' + self.imgSrc + '" /></div>' +
               '</md-dialog>'
           })
       var mdDialogCtrl = function(imgData){
