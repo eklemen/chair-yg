@@ -8,6 +8,34 @@
   /** @ngInject */
   function GalleryController($mdDialog) {
     var self = this;
+    self.imgSrc;
+    self.showImage = function(src){
+      console.log(src);
+      self.imgSrc = src;
+      // var confirm = $mdDialog.confirm()
+      //   .clickOutsideToClose(true)
+      //   .content('<img src="' + src + '" />')
+      //   .ariaLabel('Image')
+      //   return $mdDialog.show(confirm);
+      $mdDialog.show({
+
+            locals:{imgData: self.imgSrc},              
+            clickOutsideToClose: true,               
+            // templateUrl: 'dialogImg.tmpl.html',
+            controller: mdDialogCtrl,
+            controllerAs:'dialog',
+            // bindToController:true,
+            parent: angular.element(document.body),
+            template:'<md-dialog aria-label="List dialog">' +
+                '<img src="' + self.imgSrc + '" />' +
+              '</md-dialog>'
+          })
+      var mdDialogCtrl = function(imgData){
+        var self = this;
+        self.imgData = imgData;
+      }
+    }
+    
       self.engagement =[
         {
           src: 'assets/images/engagement/engagement1.JPG',
@@ -84,3 +112,10 @@
       ];
   }
 })();
+
+// angular
+// .module('chairYg')
+// .controller('mdDialogCtrl', function ($scope, items) {
+//   // items is injected in the controller, not its scope!
+//   $scope.items = items;
+// });

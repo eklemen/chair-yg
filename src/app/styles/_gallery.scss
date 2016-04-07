@@ -20,15 +20,15 @@
 			}
 			.image{
 				// margin: 20px auto;
-				padding: 10px;
+				padding: 2px;
 				@media(max-width: 599px){
 					width: 90% !important;
 				}
 				div{
 					position: relative;
 				    float: left;
-					width:  200px;
-				    height: 200px;
+					width:  250px;
+				    height: 250px;
 				    background-position: 50% 50%;
 				    background-repeat:   no-repeat;
 				    background-size:     cover;
@@ -37,9 +37,26 @@
 				    	height: 375px;
 				    }
 				}
+				&.engagement{
+					.image1{
+						background-position-y: 82%;
+					}
+				}
 				&.graduation{
 					div{
 						background-position: 50% 0;
+						@media(max-width: 600px){
+							background-size: 75%;
+						}
+					}
+				}
+				&.panels{
+					div{
+						&.image1{
+							@media(max-width: 600px){
+								background-position: 50% 0%;
+							}
+						}
 					}
 				}
 				&.letters{
@@ -50,6 +67,14 @@
 						&.image1{
 							background-position: 50% 63%;
 							background-size: 92%;	
+						}
+						@media(max-width: 600px){
+							&.image0{
+								background-size: 68%;
+							}
+							&.image1{
+								background-size: 68%;
+							}
 						}
 					}
 				}

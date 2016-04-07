@@ -24,7 +24,8 @@
 			display: flex;
 			align-items: center;
 			&.bg-1{
-				@include background-image('../assets/images/flower-unlit.JPG');
+				@include background-image('../assets/images/flower1.jpg');
+				opacity: 0.8;
 			}
 			&.bg-2{
 				@include background-image('../assets/images/flower2-sm.JPG');

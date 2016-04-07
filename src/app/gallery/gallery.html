@@ -10,7 +10,7 @@
 			</div>
 			
 			<div class="engagement image" data-ng-repeat="img in gallery.engagement track by $index" flex-xs="100">
-				<div class="image{{$index}}" style="background-image:url('{{img.src}}');"></div>
+				<div class="image{{$index}}" data-ng-click="gallery.showImage(img.src)" style="background-image:url('{{img.src}}');"></div>
 			</div>
 
 
@@ -21,7 +21,7 @@
 			</div>
 			
 			<div class="graduation image" data-ng-repeat="img in gallery.graduation track by $index" flex-xs="100">
-				<div class="image{{$index}}" style="background-image:url('{{img.src}}');"></div>
+				<div class="image{{$index}}" data-ng-click="gallery.showImage(img.src)" style="background-image:url('{{img.src}}');"></div>
 			</div>
 
 			<!-- Panel -->
@@ -31,7 +31,7 @@
 			</div>
 			
 			<div class="panels image" data-ng-repeat="img in gallery.panels track by $index" flex-xs="100">
-				<div class="image{{$index}}" style="background-image:url('{{img.src}}');"></div>
+				<div class="image{{$index}}" data-ng-click="gallery.showImage(img.src)" style="background-image:url('{{img.src}}');"></div>
 			</div>
 
 			<!-- Letter -->
@@ -41,7 +41,7 @@
 			</div>
 			
 			<div class="letters image" data-ng-repeat="img in gallery.letters track by $index" flex-xs="100">
-				<div class="image{{$index}}" style="background-image:url('{{img.src}}');"></div>
+				<div class="image{{$index}}" data-ng-click="gallery.showImage(img.src)" style="background-image:url('{{img.src}}');"></div>
 			</div>
 
 			<!-- Store -->
@@ -50,8 +50,8 @@
 				<span><hr></span>
 			</div>
 			
-			<div class="letters image" data-ng-repeat="img in gallery.store track by $index">
-				<div class="image{{$index}}" style="background-image:url('{{img.src}}');"></div>
+			<div class="storefront image" data-ng-repeat="img in gallery.store track by $index">
+				<div class="image{{$index}}" data-ng-click="gallery.showImage(img.src)" style="background-image:url('{{img.src}}');"></div>
 			</div>
 
 
@@ -59,3 +59,11 @@
 		
 	</div>
 </md-content>
+
+<script type="text/ng-template" id="dialogImg.tmpl.html">
+	<md-dialog aria-label="image"  ng-cloak>
+	<p>{{plz}}</p>
+		
+		<!-- <img src="imgSrc" alt=""> -->
+	</md-dialog>
+</script>
