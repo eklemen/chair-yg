@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-	.module('chairYg', ['ngAnimate','ngCookies', 'ngAria','ngResource','ngRoute','ngSanitize','ngMaterial','angular-scroll-animate', 'duScroll'])
+	.module('chairYg', ['ngAnimate','ngCookies', 'ngAria','ngResource','ngRoute','ngSanitize','ngMaterial','angular-scroll-animate', 'duScroll', 'bootstrapLightbox'])
 
 	.directive('mdLightbox', ['$mdDialog', function($mdDialog){
 		return {

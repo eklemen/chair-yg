@@ -9,6 +9,9 @@
 		height: 53px;
 		margin: 0 auto -5px auto;
 		border-radius: 0;
+		@media(max-width: 870px){
+			min-width: 0;
+		}
 		div{ 
 			height: 100%;
 		}

@@ -28,7 +28,7 @@
 				opacity: 0.8;
 			}
 			&.bg-2{
-				@include background-image('../assets/images/flower2-sm.JPG');
+				@include background-image('../assets/images/homebannerbottom.JPG');
 				@media(max-device-width: 768px){
 					background-attachment: scroll;
 				}

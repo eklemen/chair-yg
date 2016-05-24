@@ -13,6 +13,26 @@
 				<div class="image{{$index}}" data-ng-click="gallery.showImage(img.src)" style="background-image:url('{{img.src}}');"></div>
 			</div>
 
+			<!-- littleOnes -->
+			<div flex="100" class="section-title">
+				<span class="title">Little Ones</span>
+				<span><hr></span>
+			</div>
+			
+			<div class="littleOnes image" data-ng-repeat="img in gallery.littleOnes track by $index">
+				<div class="image{{$index}}" data-ng-click="gallery.showImage(img.src)" style="background-image:url('{{img.src}}');"></div>
+			</div>
+
+			<!-- Events -->
+			<div flex="100" class="section-title">
+				<span class="title">Events</span>
+				<span><hr></span>
+			</div>
+			
+			<div class="events image" data-ng-repeat="img in gallery.events track by $index" flex-xs="100">
+				<div class="image{{$index}}" data-ng-click="gallery.showImage(img.src)" style="background-image:url('{{img.src}}');"></div>
+			</div>
+
 
 			<!-- Graduation -->
 			<div flex="100" class="section-title">

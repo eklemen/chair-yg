@@ -6,9 +6,16 @@
     .controller('GalleryController', GalleryController);
 
   /** @ngInject */
-  function GalleryController($mdDialog) {
+  function GalleryController($mdDialog, Lightbox) {
     var self = this;
     self.imgSrc;
+
+    //THis is what is needed for lightbox directive
+    // self.openLightboxModal = function (index) {
+    //   Lightbox.openModal($scope.images, index);
+    // };
+
+
     self.showImage = function(src){
       console.log(src);
       self.imgSrc = src;
@@ -26,9 +33,8 @@
             controllerAs:'dialog',
             // bindToController:true,
             parent: angular.element(document.body),
-            template:'<div class="close-modal"><i class="fa fa-times"></i></div>' +
-                '<md-dialog aria-label="List dialog">' +
-                '<div><img class="modal-img" src="' + self.imgSrc + '" /></div>' +
+            template:'<md-dialog aria-label="List dialog">' +
+                '<img class="modal-img" src="' + self.imgSrc + '" />' +
               '</md-dialog>'
           })
       var mdDialogCtrl = function(imgData){
@@ -39,10 +45,6 @@
     
       self.engagement =[
         {
-          src: 'assets/images/engagement/engagement1.JPG',
-          title: ''
-        },
-        {
           src: 'assets/images/engagement/engagement2.JPG',
           title: ''
         },
@@ -52,6 +54,49 @@
         },
         {
           src: 'assets/images/engagement/engagement4.JPG',
+          title: ''
+        },
+        {
+          src: 'assets/images/engagement/engagement5.JPG',
+          title: ''
+        },
+        {
+          src: 'assets/images/engagement/engagement6.JPG',
+          title: ''
+        },
+        {
+          src: 'assets/images/engagement/engagement7.JPG',
+          title: ''
+        },
+        {
+          src: 'assets/images/engagement/engagement8.JPG',
+          title: ''
+        },
+        {
+          src: 'assets/images/engagement/engagement9.JPG',
+          title: ''
+        }
+      ];
+
+      self.events =[
+        {
+          src: 'assets/images/events/event1.jpg',
+          title: ''
+        },
+        {
+          src: 'assets/images/events/event2.jpg',
+          title: ''
+        },
+        {
+          src: 'assets/images/events/event3.jpg',
+          title: ''
+        },
+        {
+          src: 'assets/images/events/event4.jpg',
+          title: ''
+        },
+        {
+          src: 'assets/images/events/event5.jpg',
           title: ''
         }
       ];
@@ -77,7 +122,7 @@
           title: ''
         },
         {
-          src: 'assets/images/panel/panel3.jpg',
+          src: 'assets/images/panel/color4.JPG',
           title: ''
         }
       ];
@@ -89,6 +134,10 @@
         },
         {
           src: 'assets/images/letter/letter2.jpg',
+          title: ''
+        },
+        {
+          src: 'assets/images/letter/letter3.JPG',
           title: ''
         }
       ];
@@ -111,6 +160,45 @@
           title: ''
         }
       ];
+
+      self.littleOnes = [
+        {
+          src: 'assets/images/little-ones/BRE_01.jpg',
+          title: ''
+        },
+        {
+          src: 'assets/images/little-ones/BRE_02.jpg',
+          title: ''
+        },
+        {
+          src: 'assets/images/little-ones/BRE_03.jpg',
+          title: ''
+        },
+        {
+          src: 'assets/images/little-ones/BRE_04.jpg',
+          title: ''
+        },
+        {
+          src: 'assets/images/little-ones/BRE_05.jpg',
+          title: ''
+        },
+        {
+          src: 'assets/images/little-ones/BRE_06.jpg',
+          title: ''
+        },
+        {
+          src: 'assets/images/little-ones/BRE_07.jpg',
+          title: ''
+        },
+        {
+          src: 'assets/images/little-ones/BRE_08.jpg',
+          title: ''
+        },
+        {
+          src: 'assets/images/little-ones/BRE_09.jpg',
+          title: ''
+        }
+      ]
   }
 })();
 
