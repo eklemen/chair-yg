@@ -5,17 +5,42 @@
     .module('chairYg')
     .config(routeConfig);
 
-  /** @ngInject */
-  function routeConfig($stateProvider, $urlRouterProvider) {
-    $stateProvider
-      .state('home', {
-        url: '/',
+  function routeConfig($routeProvider) {
+    $routeProvider
+      .when('/', {
         templateUrl: 'app/main/main.html',
         controller: 'MainController',
         controllerAs: 'main'
-      });
+      })
+      .when('/contact', {
+        templateUrl: 'app/contact/contact.html',
+        controller: 'ContactController',
+        controllerAs: 'con'
+      })
+      .when('/customOrders', {
+        templateUrl: 'app/custom/custom.html',
+        controller: 'CustomController',
+        controllerAs: 'custom'
+      })
+      .when('/faq', {
+        templateUrl: 'app/faq/faq.html',
+        controller: 'FaqController',
+        controllerAs: 'faq'
+      })
+      .when('/about', {
+        templateUrl: 'app/about/about.html',
+        controller: 'AboutController',
+        controllerAs: 'about'
+      })
+      .when('/gallery', {
+        templateUrl: 'app/gallery/gallery.html',
+        controller: 'GalleryController',
+        controllerAs: 'gallery'
+      })
 
-    $urlRouterProvider.otherwise('/');
+      .otherwise({
+        redirectTo: '/'
+      });
   }
 
 })();

@@ -1,0 +1,14 @@
+<md-dialog aria-label="Screenshot" class="gallery-popup">
+  <md-toolbar>
+    <div class="md-toolbar-tools">
+      <h2 ng-bind="lb.title"></h2>
+      <span flex></span>
+      <md-button class="md-icon-button" ng-click="lb.cancel()">
+        <md-icon md-font-library="material-icons" aria-label="Close dialog" class="icon-static">close</md-icon>
+      </md-button>
+    </div>
+  </md-toolbar>
+  <md-dialog-content>
+      <img ng-src="{{lb.image}}" alt="{{title}}" class="image-popup">
+  </md-dialog-content>
+</md-dialog>

@@ -1,21 +1,58 @@
-<nav class="navbar navbar-static-top navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="https://github.com/Swiip/generator-gulp-angular">
-        <span class="glyphicon glyphicon-home"></span> Gulp Angular
-      </a>
-    </div>
+<md-toolbar class="nav" layout="row" layout-align="start center">
 
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-6">
-      <ul class="nav navbar-nav">
-        <li class="active"><a ng-href="#">Home</a></li>
-        <li><a ng-href="#">About</a></li>
-        <li><a ng-href="#">Contact</a></li>
-      </ul>
+	<div class="top-logo">
+		<md-button href="#/">
+			<div layout="row" layout-align="center center">
+				<span>Dazzling Deco</span>
+			</div>
+		</md-button>
+	</div>
 
-      <ul class="nav navbar-nav navbar-right acme-navbar-text">
-        <li>Application was created {{ vm.relativeDate }}.</li>
-      </ul>
-    </div>
-  </div>
-</nav>
+	<section flex layout="row" layout-align="end end" layout-margin layout-margin>
+		<div class="call" layout="row" layout-align="center center">
+			<md-button class="md-fab md-mini side-nav" ng-click="vm.toggleLeft()" aria-label="Menu">
+	        	<md-icon class="material-icons icon">menu</md-icon>
+	        </md-button>
+		</div>
+		
+	</section>
+
+	<div class="nav-links" layout="row" layout-align="center center">
+		<md-menu-bar>
+			<md-button href="#/">
+				<div layout="column" layout-align="center center">
+					Home
+				</div>
+			</md-button>
+			<md-button href="#/about">
+				<div layout="column" layout-align="center center">
+					About
+				</div>
+			</md-button>
+			<md-button href="#/gallery">
+				<div layout="column" layout-align="center center">
+					Gallery
+				</div>
+			</md-button>
+			<md-button href="#/customOrders">
+				<div layout="column" layout-align="center center">
+					Custom Orders
+				</div>
+			</md-button>
+			<md-button href="#/faq">
+				<div layout="column" layout-align="center center">
+					FAQ
+				</div>
+			</md-button>
+			<md-button href="#/contact">
+				<div layout="column" layout-align="center center">
+					Contact
+				</div>
+			</md-button>
+
+		</md-menu-bar>
+	</div>
+
+</md-toolbar>
+
+<ng-include src="'app/components/navbar/sidenav.html'"></ng-include>

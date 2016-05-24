@@ -1,0 +1,133 @@
+.contact{
+	padding: 90px 5% 0 5%;
+	.contact-image{
+		overflow: hidden;
+		padding: 10px 10px 10px 25px;
+		img{
+			max-width: 400px;
+			width: 100%;
+			margin: 0 auto;
+			display: block;
+		}
+	}
+	.contact-text{
+		p{
+			padding: 0 12px;
+		}
+	}
+
+	.contact-direct{
+		.no-decoration{
+			text-decoration: none;
+		}
+		.fa{
+			font-size: 24px;
+			color: rgba(0,0,0,0.54);
+		}
+	}
+	form{
+		.md-block{
+			.material-icons{
+				display: inline-block;
+			}
+			input{
+				height: 45px;
+				padding: 8px 0;
+			}
+		}
+		md-select{
+			width: 100%;
+			margin-bottom: 35px;
+		}
+		button{
+			margin-left: 0;
+			@media(max-width: 600px){
+				margin-left: 5%;
+			}
+		}
+		md-input-container{
+			input{
+				height: 45px;
+				padding: 8px 0;
+			}
+			textarea{
+				height: 55px;
+				padding: 8px 0 8px 36px;
+			}
+		}
+	}
+	&.custom{
+		form{
+			margin-top: 30px;
+			.datepicker{
+			    margin-bottom: 35px;
+				md-datepicker{
+					display: block;
+					width: 100%;
+					input{
+						padding-left: 2px;
+					}
+					.md-datepicker-button {
+						margin: 0;
+						padding: 0;
+						width: 25px;
+						md-icon{
+							color: black !important;
+						}
+					}
+					.md-datepicker-input-container{
+						width: 94%;
+						border-bottom: solid #e1e1e1 1px;
+						padding-bottom: 11px;
+					}
+					.md-datepicker-triangle-button{
+						@include hide-below();
+					}
+				}
+			}
+			md-input-container{
+				input{
+					height: 45px;
+					padding: 8px 0;
+				}
+				textarea{
+					height: 55px;
+					padding: 8px 0 8px 36px;
+				}
+			}
+		}
+		.step-number{
+			padding: 15px;
+		}
+		@media(max-width: 600px){
+			.md-2-line{
+				margin: 20px 0;
+				.step-number{
+					padding: 0 20px 0 5px;
+				}
+			}
+		}
+	}
+	&.about{
+		.contact-text{
+			padding-left: 6%;
+			@media(max-width: 600px){
+				text-align: center;
+				padding-left: 0;
+			}
+		}
+		.text-box{
+			max-width: 900px;
+			margin: 0 auto;
+			.paragraph-container{
+				padding-right: 10%;
+			}
+		}
+		img{
+			max-width: 250px;
+			width: 100%;
+
+		}
+	}
+
+}

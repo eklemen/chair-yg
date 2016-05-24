@@ -1,0 +1,112 @@
+<md-content class="contact custom" layout="column">
+	<div flex class="width-fix">
+		<div class="contact-text">
+			<h2>Custom Orders</h2>
+			<p>We know how important your special event is, and we want to turn your vision into a dazzling reality. Every individual has their own personal taste, but sometimes needs creative insight to draw it out for them.</p>
+		</div>
+	</div>
+	<div flex class="width-fix">
+		<md-list>
+			<md-list-item class="md-2-line hidden" when-visible="custom.animateElementIn">
+				<h3 class="step-number">Step 1</h3>
+				<div class="md-list-item-text">
+					<h3>The Meeting</h3>
+					<p>We meet with you to discuss your vision, what you want vs. what you don’t want, as well as financial budget.</p>
+				</div>
+			</md-list-item>
+		
+			<md-list-item class="md-2-line hidden" when-visible="custom.animateElementIn">
+				<h3 class="step-number">Step 2</h3>
+				<div class="md-list-item-text">
+					<h3>The Drawing Board</h3>
+					<p>We will draw up a design based on our meeting, then send it over to you for edits and approval.</p>
+				</div>
+			</md-list-item>
+		
+			<md-list-item class="md-2-line hidden" when-visible="custom.animateElementIn">
+				<h3 class="step-number">Step 3</h3>
+				<div class="md-list-item-text">
+					<h3>Finalize the Contract</h3>
+					<p>After final approval from you, we will provide a projected time and final price of the order.</p>
+				</div>
+			</md-list-item>
+		
+			<md-list-item class="md-2-line hidden" when-visible="custom.animateElementIn">
+				<h3 class="step-number">Step 4</h3>
+				<div class="md-list-item-text">
+					<h3>Construction</h3>
+					<p>You sit back while we make it for you, sending you pictures along the way with updates of the progress.</p>
+				</div>
+			</md-list-item>
+		
+			<md-list-item class="md-2-line hidden" when-visible="custom.animateElementIn">
+				<h3 class="step-number">Step 5</h3>
+				<div class="md-list-item-text">
+					<h3>Delivery</h3>
+					<p>Once the final project is complete, we deliver it right to you.</p>
+				</div>
+			</md-list-item>
+		</md-list>
+	</div>
+	<div flex class="width-fix form">
+		<p>First we ask you to please fill out the form below and send it back to us. Once we receive your request, we will contact you to begin the process.</p>
+		<p>If you do have any inspirations from pinterest or other pictures, please attach them or send us the links.</p>
+		<br>
+		<p>Required fields marked with <b>*</b></p>
+		<form ng-submit="custom.sendMessage(message)" name="custom.emailForm" flex>
+			<div>
+
+				<md-input-container md-no-float="" class="md-block">
+					<!-- <label>Name</label> -->
+					<md-icon class="material-icons md-mainColor icon">person</md-icon>
+					<input name="name" ng-model="custom.message.name" required="true" placeholder="Name *">
+				</md-input-container>
+
+				<md-input-container md-no-float="" class="md-block">
+					<!-- <label>Email</label> -->
+					<md-icon class="material-icons md-mainColor icon">email</md-icon>
+					<input name="_replyto" ng-model="custom.message._replyto" required="true" ng-pattern="/^.+@.+\..+$/" placeholder="Email *">
+				</md-input-container>
+
+				<md-input-container md-no-float="" class="md-block">
+					<!-- <label>Phone Number</label> -->
+					<md-icon class="material-icons md-mainColor icon">phone</md-icon>
+					<input ng-model="custom.message.phone" required="true" placeholder="Phone Number *">
+				</md-input-container>
+
+				<!-- <md-input-container class="md-block">
+					<label>Subject</label>
+					<md-select ng-model="custom.message.subject">
+						<md-option value="General-Info">General Information</md-option>
+						<md-option value="Request-Quote">Request a Quote</md-option>
+					</md-select>
+				</md-input-container> -->
+
+				<md-input-container md-no-float="" class="md-block">
+					<!-- <label>Type of Event</label> -->
+					<md-icon class="material-icons md-mainColor icon">star_border</md-icon>
+					<input name="name" ng-model="custom.message.eventType" placeholder="Type of Event">
+				</md-input-container>
+
+				<md-input-container md-no-float="" class="md-block">
+					<!-- <label>Location of Event</label> -->
+					<md-icon class="material-icons md-mainColor icon">location_on</md-icon>
+					<input name="name" ng-model="custom.message.location" placeholder="Location of Event">
+				</md-input-container>
+				
+				<div flex="100" class="datepicker">
+					<md-datepicker ng-click="custom.deb" md-no-float="" ng-model="custom.message.date" md-placeholder="Enter date"></md-datepicker>
+				</div>
+
+				<md-input-container md-no-float="" class="md-block">
+					<!-- <label>Message</label> -->
+					<md-icon class="material-icons md-mainColor icon">border_color</md-icon>
+					<textarea ng-model="custom.message.body" name="message" columns="1" rows="3" placeholder="Message *" required="true"></textarea>
+				</md-input-container>
+				<input type="text" name="_gotcha" style="display:none" />
+				<!-- <input type="hidden" name="_next" value="#" /> -->
+				<md-button class="md-raised md-primary" type="submit" ng-disabled="custom.emailForm.$invalid" value="Send">Send</md-button>
+			</div>
+		</form>
+	</div>
+</md-content>

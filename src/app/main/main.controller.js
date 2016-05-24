@@ -6,34 +6,50 @@
     .controller('MainController', MainController);
 
   /** @ngInject */
-  function MainController($timeout, webDevTec, toastr) {
-    var vm = this;
+  function MainController($http, $httpParamSerializerJQLike) {
+    var self = this;
 
-    vm.awesomeThings = [];
-    vm.classAnimation = '';
-    vm.creationDate = 1441064505356;
-    vm.showToastr = showToastr;
+    self.message = {};
+    self.emailForm;
+    self.alertSuccess = function(){
+      swal('Thanks!',
+        'We will get back to you soon.',
+        'success');
+    };
+    self.alertError = function(){
+      swal('Oops...',
+        'There was a problem sending your email.',
+        'error');
+    };
 
-    activate();
+    self.sendMessage = function() {
+        $http({
+            method  : 'POST',
+            url     : '//formspree.io/dazzlingdecorentals@gmail.com',
+            data    : $httpParamSerializerJQLike(self.message), // pass in data as strings
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/x-www-form-urlencoded'
+            },
+            Accept: 'application/json'
+         })
+        .then(function(data) {
+                console.log(data);
 
-    function activate() {
-      getWebDevTec();
-      $timeout(function() {
-        vm.classAnimation = 'rubberBand';
-      }, 4000);
-    }
-
-    function showToastr() {
-      toastr.info('Fork <a href="https://github.com/Swiip/generator-gulp-angular" target="_blank"><b>generator-gulp-angular</b></a>');
-      vm.classAnimation = '';
-    }
-
-    function getWebDevTec() {
-      vm.awesomeThings = webDevTec.getTec();
-
-      angular.forEach(vm.awesomeThings, function(awesomeThing) {
-        awesomeThing.rank = Math.random();
-      });
+                if (data.status === 200 && self.emailForm.$valid) {
+                     // if successful, bind success message to message
+                    self.alertSuccess();
+                    self.message = data.message;
+                    self.emailForm.$setPristine();
+                    self.emailForm.$setUntouched();
+                } else {
+                    // if not successful, bind errors to error variables
+                    self.alertError()
+                    // self.errorName = data.errors.name;
+                    // self.emailForm.$setPristine();
+                    // self.emailForm.$setUntouched();
+                }
+            });
     }
   }
 })();

@@ -1,0 +1,29 @@
+@mixin cursive($size){
+	font-family: 'Rochester', cursive;
+	font-size: $size;
+}
+
+// $lightblue: #c9eef0 !important;
+
+body{
+	font-family: 'Raleway', sans-serif;
+	.row{
+		margin-left: 0;
+		margin-right: 0;
+	}
+}
+
+.image-click {
+    cursor: pointer;
+}
+
+@mixin hide-below($size: 680px){
+	@media(max-width: $size){
+		display: none;
+	}
+}
+@mixin hide-above($size: 680px){
+	@media(min-width: $size){
+		display: none;
+	}
+}
