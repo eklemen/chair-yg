@@ -1,76 +1,82 @@
 <md-content class="contact" layout="column">
-	<div flex><h2>Contact</h2></div>
+    <div flex><h2>Contact</h2></div>
 
-	<div layout="column" layout-gt-sm="row">
-	<div flex>
-		<div class="contact-text">
-			<p>Please feel free to contact us at anytime to ask questions, order, or simply get our opinions. We are able to be reached via Facebook, call/text, or fill out the email form on this page.</p>
-		</div>
-		<div class="contact-direct" layout="column" layout-margin>
-			<div>
-				<span>Call today</span>
-				<div>
-					<md-icon class="material-icons md-mainColor icon">phone</md-icon>
-					<a class="no-decoration" href="tel:1-248-421-3502">248-421-3502</a>
-				</div>
+    <div layout="column" layout-gt-sm="row">
+        <div flex>
+            <div class="contact-text">
+                <p>Please feel free to contact us at anytime to ask questions, order, or simply get our opinions. We are
+                    able to be reached via Facebook, call/text, or fill out the email form on this page.</p>
+            </div>
+            <div class="contact-direct" layout="column" layout-margin>
+                <div>
+                    <span>Call today</span>
+                    <div>
+                        <md-icon class="material-icons md-mainColor icon">phone</md-icon>
+                        <a class="no-decoration" href="tel:1-248-421-3502">248-421-3502</a>
+                    </div>
 
-			</div>
-			<div>
-				<span>Email Address</span>
-				<div>
-					<md-icon class="material-icons md-mainColor icon">email</md-icon>
-					dazzlingdecorentals@gmail.com
-				</div>
-			</div>
-			<div>
-				<span>Find us on Facebook</span>
-				<div>
-					<i class="fa fa-facebook-square"></i>
-					<a target="_blank" href="https://www.facebook.com/Dazzling-Deco-1521299101531028/" class="no-decoration">
-						<span>Dazzling Deco</span>
-					</a>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div flex>
-		<p>Fill out the form below and we will return your email promptly.</p>
-		<br>
-		<p>Required fields marked with <b>*</b></p>
-		<form ng-submit="con.sendMessage(message)" name="contact.emailForm" flex>
-			<div>
+                </div>
+                <div>
+                    <span>Email Address</span>
+                    <div>
+                        <md-icon class="material-icons md-mainColor icon">email</md-icon>
+                        dazzlingdecorentals@gmail.com
+                    </div>
+                </div>
+                <div>
+                    <span>Find us on Facebook</span>
+                    <div>
+                        <i class="fa fa-facebook-square"></i>
+                        <a target="_blank" href="https://www.facebook.com/Dazzling-Deco-1521299101531028/"
+                           class="no-decoration">
+                            <span>Dazzling Deco</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div flex>
+            <p>Fill out the form below and we will return your email promptly.</p>
+            <br>
+            <p>Required fields marked with <b>*</b></p>
+            <form ng-submit="vm.sendMessage(message)" name="contact.emailForm" flex>
+                <div>
 
-				<md-input-container md-no-float="" class="md-block">
-					<md-icon class="material-icons md-mainColor icon">person</md-icon>
-					<input name="name" ng-model="con.message.name" required="true" placeholder="Name *">
-					<!-- <div ng-messages="con.message.name.$error">
-						<div ng-message="required">Please enter your name</div>
-					</div> -->
-				</md-input-container>
+                    <md-input-container md-no-float="" class="md-block">
+                        <md-icon class="material-icons md-mainColor icon">person</md-icon>
+                        <input name="name" ng-model="vm.message.name" required="true" placeholder="Name *">
+                        <!-- <div ng-messages="vm.message.name.$error">
+                            <div ng-message="required">Please enter your name</div>
+                        </div> -->
+                    </md-input-container>
 
-				<md-input-container md-no-float="" class="md-block">
-					<md-icon class="material-icons md-mainColor icon">email</md-icon>
-					<input name="_replyto" ng-model="con.message._replyTo" required="true" ng-pattern="/^.+@.+\..+$/" placeholder="Email *">
-					
-					<!-- <div ng-messages="con.message.name.$error" role="alert">
-			  <div ng-message-exp="['required', 'pattern']">
-				Please enter a valid email address.
-			  </div>
-			</div> -->
-				</md-input-container>
+                    <md-input-container md-no-float="" class="md-block">
+                        <md-icon class="material-icons md-mainColor icon">email</md-icon>
+                        <input name="_replyto" ng-model="vm.message._replyTo" required="true"
+                               ng-pattern="/^.+@.+\..+$/" placeholder="Email *">
 
-				<md-input-container md-no-float="" class="md-block">
-					<md-icon class="material-icons md-mainColor icon">border_color</md-icon>
-					<textarea ng-model="con.message.body" name="message" columns="1" rows="3" placeholder="Enter your message here...*" required="true"></textarea>
-					<!-- <div ng-messages="message.name.$error">
-						<div ng-message="required">Enter your questions or requests.</div>
-					</div> -->
-				</md-input-container>
-				<input type="text" name="_gotcha" style="display:none" />
-				<input type="hidden" name="_next" value="#" />
-				<md-button class="md-raised md-primary" type="submit" ng-disabled="contact.emailForm.$invalid" value="Send">Send</md-button>
-			</div>
-		</form>
-	</div>
-	</div>
+                        <!-- <div ng-messages="vm.message.name.$error" role="alert">
+                  <div ng-message-exp="['required', 'pattern']">
+                    Please enter a valid email address.
+                  </div>
+                </div> -->
+                    </md-input-container>
+
+                    <md-input-container md-no-float="" class="md-block">
+                        <md-icon class="material-icons md-mainColor icon">border_color</md-icon>
+                        <textarea ng-model="vm.message.body" name="message" columns="1" rows="3"
+                                  placeholder="Enter your message here...*" required="true"></textarea>
+                        <!-- <div ng-messages="message.name.$error">
+                            <div ng-message="required">Enter your questions or requests.</div>
+                        </div> -->
+                    </md-input-container>
+                    <input type="text" name="_gotcha" style="display:none"/>
+                    <input type="hidden" name="_next" value="#"/>
+                    <md-button class="md-raised md-primary" type="submit" ng-disabled="contact.emailForm.$invalid"
+                               value="Send">Send
+                    </md-button>
+                </div>
+            </form>
+        </div>
+    </div>
 </md-content>

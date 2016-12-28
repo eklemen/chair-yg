@@ -1,17 +1,17 @@
-(function() {
-  'use strict';
+(function () {
+    'use strict';
 
-  angular
-    .module('chairYg')
-    .controller('FaqController', FaqController);
+    angular
+        .module('chairYg')
+        .controller('FaqController', FaqController);
 
-  /** @ngInject */
-  function FaqController() {
-    var self = this;
+    /** @ngInject */
+    function FaqController() {
+        var self = this;
 
-    self.active = function(i) {
-      self.isActive = i;
+        self.active = function (i) {
+            self.isActive = i;
+        }
+
     }
-
-  }
 })();

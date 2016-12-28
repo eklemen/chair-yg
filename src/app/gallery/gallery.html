@@ -1,83 +1,91 @@
 <md-content class="gallery" layout="column" layout-gt-sm="row">
-	<div class="container">
-		<div flex><h2>Gallery</h2></div>
-		<div class="images-container" layout="row" layout-wrap layout-align-xs="center center" layout-align-gt-xs="start center">
+    <div class="container">
+        <div flex><h2>Gallery</h2></div>
+        <div class="images-container" layout="row" layout-wrap layout-align-xs="center center"
+             layout-align-gt-xs="start center">
 
-			<!-- Engagement -->
-			<div flex="100" class="section-title">
-				<span class="title">Engagement</span>
-				<span><hr></span>
-			</div>
-			
-			<div class="engagement image" data-ng-repeat="img in gallery.engagement track by $index" flex-xs="100">
-				<div class="image{{$index}}" data-ng-click="gallery.showImage(img.src)" style="background-image:url('{{img.src}}');"></div>
-			</div>
+            <!-- Engagement -->
+            <div flex="100" class="section-title">
+                <span class="title">Engagement</span>
+                <span><hr></span>
+            </div>
 
-			<!-- littleOnes -->
-			<div flex="100" class="section-title">
-				<span class="title">Little Ones</span>
-				<span><hr></span>
-			</div>
-			
-			<div class="littleOnes image" data-ng-repeat="img in gallery.littleOnes track by $index">
-				<div class="image{{$index}}" data-ng-click="gallery.showImage(img.src)" style="background-image:url('{{img.src}}');"></div>
-			</div>
+            <div class="engagement image" data-ng-repeat="img in vm.engagement track by $index" flex-xs="100">
+                <div class="image{{$index}}" data-ng-click="vm.showImage(img.src)"
+                     style="background-image:url('{{img.src}}');"></div>
+            </div>
 
-			<!-- Events -->
-			<div flex="100" class="section-title">
-				<span class="title">Events</span>
-				<span><hr></span>
-			</div>
-			
-			<div class="events image" data-ng-repeat="img in gallery.events track by $index" flex-xs="100">
-				<div class="image{{$index}}" data-ng-click="gallery.showImage(img.src)" style="background-image:url('{{img.src}}');"></div>
-			</div>
+            <!-- littleOnes -->
+            <div flex="100" class="section-title">
+                <span class="title">Little Ones</span>
+                <span><hr></span>
+            </div>
 
+            <div class="littleOnes image" data-ng-repeat="img in vm.littleOnes track by $index">
+                <div class="image{{$index}}" data-ng-click="vm.showImage(img.src)"
+                     style="background-image:url('{{img.src}}');"></div>
+            </div>
 
-			<!-- Graduation -->
-			<div flex="100" class="section-title">
-				<span class="title">Graduation</span>
-				<span><hr></span>
-			</div>
-			
-			<div class="graduation image" data-ng-repeat="img in gallery.graduation track by $index" flex-xs="100">
-				<div class="image{{$index}}" data-ng-click="gallery.showImage(img.src)" style="background-image:url('{{img.src}}');"></div>
-			</div>
+            <!-- Events -->
+            <div flex="100" class="section-title">
+                <span class="title">Events</span>
+                <span><hr></span>
+            </div>
 
-			<!-- Panel -->
-			<div flex="100" class="section-title">
-				<span class="title">Panels</span>
-				<span><hr></span>
-			</div>
-			
-			<div class="panels image" data-ng-repeat="img in gallery.panels track by $index" flex-xs="100">
-				<div class="image{{$index}}" data-ng-click="gallery.showImage(img.src)" style="background-image:url('{{img.src}}');"></div>
-			</div>
-
-			<!-- Letter -->
-			<div flex="100" class="section-title">
-				<span class="title">Letters</span>
-				<span><hr></span>
-			</div>
-			
-			<div class="letters image" data-ng-repeat="img in gallery.letters track by $index" flex-xs="100">
-				<div class="image{{$index}}" data-ng-click="gallery.showImage(img.src)" style="background-image:url('{{img.src}}');"></div>
-			</div>
-
-			<!-- Store -->
-			<div flex="100" class="section-title">
-				<span class="title">Store Front</span>
-				<span><hr></span>
-			</div>
-			
-			<div class="storefront image" data-ng-repeat="img in gallery.store track by $index">
-				<div class="image{{$index}}" data-ng-click="gallery.showImage(img.src)" style="background-image:url('{{img.src}}');"></div>
-			</div>
+            <div class="events image" data-ng-repeat="img in vm.events track by $index" flex-xs="100">
+                <div class="image{{$index}}" data-ng-click="vm.showImage(img.src)"
+                     style="background-image:url('{{img.src}}');"></div>
+            </div>
 
 
-		</div> <!-- end images-container -->
-		
-	</div>
+            <!-- Graduation -->
+            <div flex="100" class="section-title">
+                <span class="title">Graduation</span>
+                <span><hr></span>
+            </div>
+
+            <div class="graduation image" data-ng-repeat="img in vm.graduation track by $index" flex-xs="100">
+                <div class="image{{$index}}" data-ng-click="vm.showImage(img.src)"
+                     style="background-image:url('{{img.src}}');"></div>
+            </div>
+
+            <!-- Panel -->
+            <div flex="100" class="section-title">
+                <span class="title">Panels</span>
+                <span><hr></span>
+            </div>
+
+            <div class="panels image" data-ng-repeat="img in vm.panels track by $index" flex-xs="100">
+                <div class="image{{$index}}" data-ng-click="vm.showImage(img.src)"
+                     style="background-image:url('{{img.src}}');"></div>
+            </div>
+
+            <!-- Letter -->
+            <div flex="100" class="section-title">
+                <span class="title">Letters</span>
+                <span><hr></span>
+            </div>
+
+            <div class="letters image" data-ng-repeat="img in vm.letters track by $index" flex-xs="100">
+                <div class="image{{$index}}" data-ng-click="vm.showImage(img.src)"
+                     style="background-image:url('{{img.src}}');"></div>
+            </div>
+
+            <!-- Store -->
+            <div flex="100" class="section-title">
+                <span class="title">Store Front</span>
+                <span><hr></span>
+            </div>
+
+            <div class="storefront image" data-ng-repeat="img in vm.store track by $index">
+                <div class="image{{$index}}" data-ng-click="vm.showImage(img.src)"
+                     style="background-image:url('{{img.src}}');"></div>
+            </div>
+
+
+        </div> <!-- end images-container -->
+
+    </div>
 </md-content>
 
 <!-- <script type="text/ng-template" id="dialogImg.tmpl.html">

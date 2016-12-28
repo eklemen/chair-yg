@@ -1,137 +1,137 @@
-@mixin background-image($url, $attachment:scroll){
-	background: url($url) no-repeat center center $attachment;
-	// -webkit-background-size: cover;
-	// -moz-background-size: cover;
-	// -o-background-size: cover;
-	background-size: cover;
-	position: relative;
-}
-
-.main{
-	md-content{
-		width: 100%;
-	}
-	.overflow-hidden{
-		overflow: hidden;
-	}
-	.section1{
-		clear: both;
-		height: 700px;
-		&.section3{
-			height: 300px;
-		}
-		.background{
-			display: flex;
-			align-items: center;
-			&.bg-1{
-				@include background-image('../assets/images/flower1.jpg');
-				opacity: 0.8;
-			}
-			&.bg-2{
-				@include background-image('../assets/images/homebannerbottom.JPG');
-				@media(max-device-width: 768px){
-					background-attachment: scroll;
-				}
-			}
-			.content{
-				width: 100%;
-				p{
-					background-color: white;
-					max-width: 700px;
-					padding: 20px;
-					border-radius: 5px;
-					line-height: 22px;
-				}
-			}
-			.headding{
-				width: 100%;
-			    height: 100%;
-			    background-color: rgba(0,0,0, 0.4);
-			    color: #fff;
-				h3{
-					font-size: 4em;
-					letter-spacing: 2px;
-					margin: 0;
-					@media(max-width: 480px) {
-				    	font-size: 34px;
-					    letter-spacing: 1px;
-				    }
-				}
-				p{
-					text-align: center;
-					@include cursive(2em);
-					margin: 0;
-					@media(max-width: 480px) {
-				    	font-size: 24px;
-				    }
-					@media(min-width: 480px) {
-				    	br{
-				    		display: none
-				    	}
-				    }
-				}
-
-			}
-		}
-	}
-
-	.section2{
-		clear: both;
-		padding-top: 25px;
-		min-height: 300px;
-		display: flex;
-		align-items: center;
-		.info-container{
-			width: 100%;
-			.info-item{
-			    padding: 2%;
-				text-align: center;
-				.material-icons {
-					font-size: 48px;
-				}
-				@media(max-width: 600px){
-					padding-left: 10%;
-					padding-right: 10%;
-				}
-			}
-		}
-	}
-
-	.section4{
-		min-height: 300px;
-		padding: 4%;
-		.form-container{
-			width: 50%;
-		    padding-right: 5%;
-		    max-width: 600px;
-		    margin: 0 auto;
-
-			.md-block{
-				textarea{
-					height: 65px;
-				}
-			}
-			@media(max-width: 768px){
-				padding: 0;
-				width: 100%;
-				.md-block{
-					width: 90%;
-					margin: 0 auto;
-				}
-				button{
-					margin-left: 5%;
-				}
-			}
-		}
-		.form-image{
-			width: 50%;
-			@media(max-width: 768px){
-				display: none;
-			}
-			img{
-				margin: 0 auto;
-				display: block;
-			}
-		}
-	}
-}
+//@mixin background-image($url, $attachment:scroll) {
+//  background: url($url) no-repeat center center $attachment;
+//  // -webkit-background-size: cover;
+//  // -moz-background-size: cover;
+//  // -o-background-size: cover;
+//  background-size: cover;
+//  position: relative;
+//}
+//
+//.main {
+//  md-content {
+//    width: 100%;
+//  }
+//  .overflow-hidden {
+//    overflow: hidden;
+//  }
+//  .section1 {
+//    clear: both;
+//    height: 700px;
+//    &.section3 {
+//      height: 300px;
+//    }
+//    .background {
+//      display: flex;
+//      align-items: center;
+//      &.bg-1 {
+//        @include background-image('../assets/images/flower1.jpg');
+//        opacity: 0.8;
+//      }
+//      &.bg-2 {
+//        @include background-image('../assets/images/homebannerbottom.JPG');
+//        @media(max-device-width: 768px) {
+//          background-attachment: scroll;
+//        }
+//      }
+//      .content {
+//        width: 100%;
+//        p {
+//          background-color: white;
+//          max-width: 700px;
+//          padding: 20px;
+//          border-radius: 5px;
+//          line-height: 22px;
+//        }
+//      }
+//      .headding {
+//        width: 100%;
+//        height: 100%;
+//        background-color: rgba(0, 0, 0, 0.4);
+//        color: #fff;
+//        h3 {
+//          font-size: 4em;
+//          letter-spacing: 2px;
+//          margin: 0;
+//          @media(max-width: 480px) {
+//            font-size: 34px;
+//            letter-spacing: 1px;
+//          }
+//        }
+//        p {
+//          text-align: center;
+//          @include cursive(2em);
+//          margin: 0;
+//          @media(max-width: 480px) {
+//            font-size: 24px;
+//          }
+//          @media(min-width: 480px) {
+//            br {
+//              display: none
+//            }
+//          }
+//        }
+//
+//      }
+//    }
+//  }
+//
+//  .section2 {
+//    clear: both;
+//    padding-top: 25px;
+//    min-height: 300px;
+//    display: flex;
+//    align-items: center;
+//    .info-container {
+//      width: 100%;
+//      .info-item {
+//        padding: 2%;
+//        text-align: center;
+//        .material-icons {
+//          font-size: 48px;
+//        }
+//        @media(max-width: 600px) {
+//          padding-left: 10%;
+//          padding-right: 10%;
+//        }
+//      }
+//    }
+//  }
+//
+//  .section4 {
+//    min-height: 300px;
+//    padding: 4%;
+//    .form-container {
+//      width: 50%;
+//      padding-right: 5%;
+//      max-width: 600px;
+//      margin: 0 auto;
+//
+//      .md-block {
+//        textarea {
+//          height: 65px;
+//        }
+//      }
+//      @media(max-width: 768px) {
+//        padding: 0;
+//        width: 100%;
+//        .md-block {
+//          width: 90%;
+//          margin: 0 auto;
+//        }
+//        button {
+//          margin-left: 5%;
+//        }
+//      }
+//    }
+//    .form-image {
+//      width: 50%;
+//      @media(max-width: 768px) {
+//        display: none;
+//      }
+//      img {
+//        margin: 0 auto;
+//        display: block;
+//      }
+//    }
+//  }
+//}
