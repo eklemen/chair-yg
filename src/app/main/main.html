@@ -1,97 +1,45 @@
-<div class="main" layout="vertical">
+<!--<div class="hero-image"></div>-->
+<div class="home">
 
-    <md-content class="overflow-hidden">
+    <div class="container">
+        <div class="banner">
+            <h3>Dazzling Deco</h3>
+            <p>Paper Flower Backdrops & Decor</p>
+        </div>
+        <div back-to-top data-ng-class="boolChangeClass ? 'to-top-show' : 'to-top-hide'"><a href="#top" du-smooth-scroll offset="200" ><button class="btn btn-default">Back to top</button></a></div>
 
-        <div class="section1">
-            <div layout-fill class="background bg-1">
-                <div class="headding" layout="column" layout-align="center center">
-                    <h3>Dazzling Deco</h3>
-                    <p>Paper Flower Backdrops & Decor</p>
-                </div>
-            </div>
-        </div> <!-- .section1 -->
-
-        <div class="section2">
-            <div class="info-container" layout-gt-xs="row" layout="column" layout-align-gt-xs="space-between center"
-                 layout-align="center center">
-                <div class="info-item" flex>
-                    <md-icon class="material-icons">dashboard</md-icon>
+        <div class="col-sm-6">
+            <div class="box-group">
+                <div class="box">
                     <h4>Specialty Items</h4>
                     <p>A little bit of dazzle on the traditional event necessities.</p>
                 </div>
-                <div class="info-item" flex>
-                    <md-icon class="material-icons">filter_vintage</md-icon>
+                <div class="box">
                     <h4>Flower Backdrops</h4>
                     <p>Carefully hand-crafted, durable paper flower deco panels.</p>
                 </div>
-                <div class="info-item" flex>
-                    <md-icon class="material-icons">add_shopping_cart</md-icon>
+                <div class="box">
                     <h4>Rent & Purchase</h4>
                     <p>Need a few hours? Or a lifetime? We provide both.</p>
                 </div>
             </div>
-        </div> <!-- .section2 -->
+        </div>
 
-        <div class="section1 section3">
-            <div layout-fill class="background bg-2">
-                <div class="content" layout="row" layout-align="center center">
+        <div class="col-sm-6">
+            <div>
+                <div class="content">
                     <p flex="66" flex-sm="90">Whether you are hosting a corporate event, your dream wedding, or a baby
                         shower, we offer gorgeous, hand-constructed paper floral backdrops.</p>
                 </div>
             </div>
-        </div> <!-- .section1 .section3 -->
+        </div>
 
 
-        <div class="section4" id="contact" layout="row">
-            <div class="form-container">
-                <div>
-                    <p>If you have any questions, just fill out the form below and we will get back to you as soon as we
-                        can!</p>
-                </div>
-                <form ng-submit="vm.sendMessage(message)" name="vm.emailForm">
-                    <div>
-                        <md-input-container class="md-block" md-no-float="">
-                            <!-- <label>Name</label> -->
-                            <input name="name" ng-model="vm.message.name" required="true" placeholder="Name">
-                            <!-- <div ng-messages="message.name.$error">
-                              <div ng-message="required">Please enter your name</div>
-                            </div> -->
-                        </md-input-container>
+        <div class="col-sm-12" id="contact">
+            <contact-form></contact-form>
+        </div>
 
-                        <md-input-container class="md-block" md-no-float="">
-                            <!-- <label>Email</label> -->
-                            <input name="_replyto" ng-model="vm.message._replyTo" required="true"
-                                   ng-pattern="/^.+@.+\..+$/" placeholder="Email">
-                        </md-input-container>
-
-                        <md-input-container class="md-block" md-no-float="">
-                            <!-- <label>Message</label> -->
-                            <textarea ng-model="vm.message.body" name="message" columns="1" rows="3"
-                                      placeholder="Enter your message here..." required="true"></textarea>
-                        </md-input-container>
-                        <input type="text" name="_gotcha" style="display:none"/>
-                        <input type="hidden" name="_next" value="#"/>
-                        <!-- <input type="submit" value="Send"> -->
-                        <md-button class="md-raised md-primary" ng-disabled="vm.emailForm.$invalid" type="submit"
-                                   value="Send">Send
-                        </md-button>
-                    </div>
-                </form>
-            </div>
-            <!-- <button ng-click="vm.alertError()"></button> -->
-        </div> <!-- .section4 -->
-
-
-</div> <!-- .main -->
-
-<!-- <acme-malarkey extra-values="['Yeoman', 'Gulp', 'Angular']" />
-  <p class="animated infinite pulse" >
-      <button type="button" class="btn btn-lg btn-success">
-      Splendid Toastr</button>
-  </p>
--->
-</md-content>
-
+    </div>
 </div>
 
 <!-- <p>

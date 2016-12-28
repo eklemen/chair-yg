@@ -1,58 +1,47 @@
-<md-toolbar class="nav" layout="row" layout-align="start center">
+<nav class="nav">
 
     <div class="top-logo">
-        <md-button href="#/">
-            <div layout="row" layout-align="center center">
+        <button class="btn btn-primary" href="#/">
+            <div>
                 <span>Dazzling Deco</span>
             </div>
-        </md-button>
+        </button>
     </div>
 
-    <section flex layout="row" layout-align="end end" layout-margin layout-margin>
-        <div class="call" layout="row" layout-align="center center">
-            <md-button class="md-fab md-mini side-nav" ng-click="vm.toggleLeft()" aria-label="Menu">
-                <md-icon class="material-icons icon">menu</md-icon>
-            </md-button>
-        </div>
-
-    </section>
-
-    <div class="nav-links" layout="row" layout-align="center center">
-        <md-menu-bar>
-            <md-button href="#/">
-                <div layout="column" layout-align="center center">
+    <div class="nav-links">
+        <div class="btn-group">
+            <button class="btn btn-primary" href="#/">
+                <div>
                     Home
                 </div>
-            </md-button>
-            <md-button href="#/about">
-                <div layout="column" layout-align="center center">
+            </button>
+            <button class="btn btn-primary" href="#/about">
+                <div>
                     About
                 </div>
-            </md-button>
-            <md-button href="#/gallery">
-                <div layout="column" layout-align="center center">
+            </button>
+            <button class="btn btn-primary" href="#/gallery">
+                <div>
                     Gallery
                 </div>
-            </md-button>
-            <md-button href="#/customOrders">
-                <div layout="column" layout-align="center center">
+            </button>
+            <button class="btn btn-primary" href="#/customOrders">
+                <div>
                     Custom Orders
                 </div>
-            </md-button>
-            <md-button href="#/faq">
-                <div layout="column" layout-align="center center">
+            </button>
+            <button class="btn btn-primary" href="#/faq">
+                <div>
                     FAQ
                 </div>
-            </md-button>
-            <md-button href="#/contact">
-                <div layout="column" layout-align="center center">
+            </button>
+            <button class="btn btn-primary" href="#/contact">
+                <div>
                     Contact
                 </div>
-            </md-button>
+            </button>
 
-        </md-menu-bar>
+        </div>
     </div>
 
-</md-toolbar>
-
-<ng-include src="'app/components/navbar/sidenav.html'"></ng-include>
+</nav>

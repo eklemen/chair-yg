@@ -7,10 +7,10 @@
 
     /** @ngInject */
     function FaqController() {
-        var self = this;
+        var vm = this;
 
-        self.active = function (i) {
-            self.isActive = i;
+        vm.active = function (i) {
+            vm.isActive = i;
         }
 
     }

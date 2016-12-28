@@ -1,20 +1,50 @@
-@mixin cursive($size) {
-  font-family: 'Rochester', cursive;
-  font-size: $size;
-}
+//@mixin bp-large {
+//  @media only screen and (max-width: 60em) {
+//    @content;
+//  }
+//}
+//
+//@mixin bp-medium {
+//  @media only screen and (max-width: 40em) {
+//    @content;
+//  }
+//}
+//
+//@mixin bp-small {
+//  @media only screen and (max-width: 30em) {
+//    @content;
+//  }
+//}
 
 // $lightblue: #c9eef0 !important;
 
 body {
   font-family: 'Raleway', sans-serif;
-  .row {
-    margin-left: 0;
-    margin-right: 0;
-  }
 }
 
-.image-click {
-  cursor: pointer;
+* {
+  box-sizing: border-box;
+}
+
+.hero-image{
+  background:url('http://placehold.it/1920x1080&text=Hero+Image') center center;
+  background-size:cover;
+  height: 100%;
+}
+
+.to-top-hide{
+  display: none;
+  transition: opacity .25s ease-in-out;
+}
+
+.to-top-show{
+  display: block;
+  position: fixed;
+  z-index: 2;
+  right: 5px;
+  bottom: 30%;
+  background-color: white;
+  color: black;
 }
 
 @mixin hide-below($size: 680px) {
